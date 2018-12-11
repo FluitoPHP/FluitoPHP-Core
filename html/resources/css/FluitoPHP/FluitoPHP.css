@@ -1,0 +1,315 @@
+/**
+ * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
+ * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
+ * @since         0.1
+ * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @author        Neha Jain
+ */
+
+.FluitoPHP.filemanager {
+    background: #f2f5f6; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 ); /* IE6-9 */
+}
+
+.FluitoPHP-filemanager {
+}
+
+.FluitoPHP-filemanager header {
+
+}
+
+.FluitoPHP-filemanager .base-nav {
+    padding: 5px 0;
+}
+
+.FluitoPHP-filemanager .base-nav button{
+    margin: 0 0 2px 5px;
+}
+
+.FluitoPHP-filemanager .base-nav button .label {
+    padding-left: 0;
+}
+
+.FluitoPHP-filemanager .base-nav button .actn-img {
+    display: inline-block;
+    height: 21px;
+    padding-top: 2px;
+}
+
+.FluitoPHP-filemanager .base-nav .upload .actn-img {
+    background: url("../../img/filemanager/buttons/upload.png") no-repeat 0 0 transparent;
+    padding-left: 29px;
+}
+
+.FluitoPHP-filemanager .base-nav .new-directory .actn-img {
+    background: url("../../img/filemanager/buttons/new-directory.png") no-repeat 0 0 transparent;
+    padding-left: 24px;
+}
+
+.FluitoPHP-filemanager .base-nav .cut .actn-img {
+    background: url("../../img/filemanager/buttons/cut.png") no-repeat 0 1px transparent;
+    padding-left: 25px;
+}
+
+.FluitoPHP-filemanager .base-nav .copy .actn-img {
+    background: url("../../img/filemanager/buttons/copy.png") no-repeat 0 0 transparent;
+    padding-left: 21px;
+}
+
+.FluitoPHP-filemanager .base-nav .paste .actn-img {
+    background: url("../../img/filemanager/buttons/paste.png") no-repeat 0 0 transparent;
+    padding-left: 21px;
+}
+
+.FluitoPHP-filemanager .base-nav .clear-clipboard .actn-img {
+    background: url("../../img/filemanager/buttons/clear-clipboard.png") no-repeat 0 0 transparent;
+    padding-left: 20px;
+}
+
+.FluitoPHP-filemanager .base-nav .rename .actn-img {
+    background: url("../../img/filemanager/buttons/rename.png") no-repeat 0 0 transparent;
+    padding-left: 23px;
+}
+
+.FluitoPHP-filemanager .base-nav .delete .actn-img {
+    background: url("../../img/filemanager/buttons/delete.png") no-repeat 0 0 transparent;
+    padding-left: 21px;
+}
+
+.FluitoPHP-filemanager .breadcrumbs .breadcrumb {
+    margin-bottom: 0;
+}
+
+.FluitoPHP-filemanager .bc-item {
+
+}
+
+.FluitoPHP-filemanager .bc-link {
+    cursor: pointer;
+}
+
+.FluitoPHP-filemanager .bc-link-refresh {
+    cursor: pointer;
+}
+
+.FluitoPHP-filemanager .folder-viewport {
+
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item {
+    cursor: pointer;
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item:hover,
+.FluitoPHP-filemanager .folder-viewport .folder-item:active,
+.FluitoPHP-filemanager .folder-viewport .folder-item:focus {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.selected {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.selected:hover,
+.FluitoPHP-filemanager .folder-viewport .folder-item.selected:active,
+.FluitoPHP-filemanager .folder-viewport .folder-item.selected:focus {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item .item-name {
+    max-width: 128px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item .item-name .overflow-hidden {
+    overflow: hidden;
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item .item-thumb {
+    position: relative;
+    border-radius: 10%;
+    height: 128px;
+    width: 128px;
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item .item-thumb .selector {
+    position: absolute;
+    background: url("../../img/filemanager/buttons/un-checked.png") no-repeat 0 0 transparent;
+    width: 17px;
+    height: 17px;
+    margin: 5px 0 0 5px;
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.selected .item-thumb .selector {
+    background-image: url("../../img/filemanager/buttons/checked.png");
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item .item-thumb .selector:hover,
+.FluitoPHP-filemanager .folder-viewport .folder-item .item-thumb .selector:active,
+.FluitoPHP-filemanager .folder-viewport .folder-item .item-thumb .selector:focus {
+    background-image: url("../../img/filemanager/buttons/un-checked-hover.png");
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.selected .item-thumb .selector:hover,
+.FluitoPHP-filemanager .folder-viewport .folder-item.selected .item-thumb .selector:active,
+.FluitoPHP-filemanager .folder-viewport .folder-item.selected .item-thumb .selector:focus {
+    background-image: url("../../img/filemanager/buttons/checked-hover.png");
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item .item-thumb .alt-img {
+    position: absolute;
+    background: url("../../img/filemanager/icons/128x128/file.png") no-repeat 0 0 transparent;
+    width: 128px;
+    height: 128px;
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item .item-thumb img {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    border-radius: 10%;
+    border: 1px solid black;
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.directory .item-thumb .alt-img {
+    background-image: url("../../img/filemanager/icons/128x128/folder.png");
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.jpg .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.jpeg .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.gif .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.bmp .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.svg .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.tiff .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.png .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.odb .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.odf .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.odg .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.odp .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.ods .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.odt .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.otg .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.otp .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.ots .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.ott .item-thumb .alt-img {
+    background-image: url("../../img/filemanager/icons/128x128/image.png");
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.aiff .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.m4a .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.mid .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.mp3 .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.ogg .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.wav .item-thumb .alt-img {
+    background-image: url("../../img/filemanager/icons/128x128/music.png");
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.avi .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.mov .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.mp4 .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.mpeg .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.mpg .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.webm .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.wma .item-thumb .alt-img {
+    background-image: url("../../img/filemanager/icons/128x128/video.png");
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.css .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.js .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.html .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.xhtml .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.php .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.java .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.cpp .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.h .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.c .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.htaccess .item-thumb .alt-img
+.FluitoPHP-filemanager .folder-viewport .folder-item.asp .item-thumb .alt-img {
+    background-image: url("../../img/filemanager/icons/128x128/code.png");
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.gz .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.rar .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.tar .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.zip .item-thumb .alt-img {
+    background-image: url("../../img/filemanager/icons/128x128/archive.png");
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.dmg .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.iso .item-thumb .alt-img {
+    background-image: url("../../img/filemanager/icons/128x128/iso.png");
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.sql .item-thumb .alt-img {
+    background-image: url("../../img/filemanager/icons/128x128/sql.png");
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.pdf .item-thumb .alt-img {
+    background-image: url("../../img/filemanager/icons/128x128/acrobat.png");
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.accdb .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.ade .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.adp .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.mdb .item-thumb .alt-img {
+    background-image: url("../../img/filemanager/icons/128x128/access.png");
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.dwg .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.dxf .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.vwx .item-thumb .alt-img {
+    background-image: url("../../img/filemanager/icons/128x128/autocad.png");
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.csv .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.xls .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.xlsx .item-thumb .alt-img {
+    background-image: url("../../img/filemanager/icons/128x128/excel.png");
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.fla .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.flv .item-thumb .alt-img {
+    background-image: url("../../img/filemanager/icons/128x128/flash.png");
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.ai .item-thumb .alt-img {
+    background-image: url("../../img/filemanager/icons/128x128/illustrator.png");
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.psd .item-thumb .alt-img {
+    background-image: url("../../img/filemanager/icons/128x128/photoshop.png");
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.ppt .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.pptx .item-thumb .alt-img {
+    background-image: url("../../img/filemanager/icons/128x128/powerpoint.png");
+}
+
+.FluitoPHP-filemanager .folder-viewport .folder-item.doc .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.docx .item-thumb .alt-img,
+.FluitoPHP-filemanager .folder-viewport .folder-item.rtf .item-thumb .alt-img {
+    background-image: url("../../img/filemanager/icons/128x128/word.png");
+}
+
+.FluitoPHP-filemanager footer {
+    text-align: right;
+}
+
+.FluitoPHP-filemanager .foot-buttons {
+}
+
+.FluitoPHP-filemanager .foot-buttons button {
+    margin: 0 0 2px 5px;
+}

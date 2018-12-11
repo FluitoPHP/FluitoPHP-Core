@@ -1,0 +1,11 @@
+# Check for Rewrite Module
+<IfModule mod_rewrite.c>
+	
+	# Activate Rewrite Engine
+	RewriteEngine On
+	
+	# Redirect all requests to index.php
+    RewriteRule ^ ../html/index.php [L]
+
+</IfModule>
+# End If Rewrite Module

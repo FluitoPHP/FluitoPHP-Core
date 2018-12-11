@@ -1,0 +1,15 @@
+##
+# Note: This will not work if it is used in a sub folder.
+#       A root domain folder will be required.
+##
+# Check for Rewrite Module.
+<IfModule mod_rewrite.c>
+	
+	# Activate Rewrite Engine
+	RewriteEngine On
+	
+	# Redirect all requests to index.php
+    RewriteRule ^(.*)$ /html/$1
+
+</IfModule>
+# End If Rewrite Module

@@ -1,0 +1,15 @@
+# Check for Rewrite Module
+<IfModule mod_rewrite.c>
+	
+	# Activate Rewrite Engine
+	RewriteEngine On
+	
+	# Add Rewrite Conditions
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+	
+	# Redirect all requests to index.php
+    RewriteRule ^ index.php [L]
+
+</IfModule>
+# End If Rewrite Module
