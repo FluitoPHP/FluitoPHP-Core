@@ -1,5 +1,9 @@
 /temp/*
 !/temp/.htaccess
+!/temp/session
+
+/temp/session/*
+!/temp/session/.gitkeep
 
 /application/*
 !/application/.htaccess
