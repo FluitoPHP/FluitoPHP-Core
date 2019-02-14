@@ -527,7 +527,10 @@ class FluitoPHP {
             }
         } else {
 
-            if (file_exists(EXTENSIONS . DS . $className . '.class.php')) {
+            if (file_exists(CORE . DS . $className . '.class.php')) {
+
+                require_once( CORE . DS . $className . '.class.php' );
+            } else if (file_exists(EXTENSIONS . DS . $className . '.class.php')) {
 
                 require_once( EXTENSIONS . DS . $className . '.class.php' );
             } else if (file_exists(LIB . DS . $className . '.class.php')) {
