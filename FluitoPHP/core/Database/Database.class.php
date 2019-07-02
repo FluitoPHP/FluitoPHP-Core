@@ -194,12 +194,12 @@ class Database {
         $connectionsData = \FluitoPHP\FluitoPHP::GetInstance()->
                 GetConfig('DATABASE');
 
-        $connectionsData = $connectionsData ? $connectionsData : [];
+        $connectionsData = $connectionsData ? $connectionsData : ['connections' => []];
 
         $moduleConnectionsData = \FluitoPHP\FluitoPHP::GetInstance()->
                 GetModuleConfig('DATABASE');
 
-        $moduleConnectionsData = $moduleConnectionsData ? $moduleConnectionsData : [];
+        $moduleConnectionsData = $moduleConnectionsData ? $moduleConnectionsData : ['connections' => []];
 
 
         foreach ($moduleConnectionsData['connections'] as $id => & $details) {
