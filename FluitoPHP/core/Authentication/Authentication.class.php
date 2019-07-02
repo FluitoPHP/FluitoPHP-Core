@@ -696,7 +696,7 @@ class Authentication {
             \FluitoPHP\Response\Response::GetInstance()->
                     SetCookie($this->
                             config['id'], $cookieValue, $this->
-                            config['expire'], '', '', false, true);
+                            config['expire'], '/', '', false, true);
         } else {
 
             \FluitoPHP\Response\Response::GetInstance()->
