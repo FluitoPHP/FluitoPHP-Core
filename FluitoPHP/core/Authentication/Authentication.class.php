@@ -701,7 +701,7 @@ class Authentication {
 
             \FluitoPHP\Response\Response::GetInstance()->
                     SetCookie($this->
-                            config['id'], $cookieValue, 0, '', '', false, true);
+                            config['id'], $cookieValue, 0, '/', '', false, true);
         }
 
         return true;
