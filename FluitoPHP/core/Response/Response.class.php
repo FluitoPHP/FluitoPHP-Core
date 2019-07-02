@@ -18,14 +18,14 @@ namespace FluitoPHP\Response;
 
 /**
  * Response Class.
- * 
+ *
  * Helper class for response of the web application.
- * 
+ *
  * Variables:
  *      1. $instance
  *      2. $view
  *      3. $httpCodes
- * 
+ *
  * Functions:
  *      1. __construct
  *      2. GetInstance
@@ -39,7 +39,7 @@ namespace FluitoPHP\Response;
  *      10. View
  *      11. SetCookie
  *      12. SetContentType
- * 
+ *
  * @author Neha Jain
  * @since  0.1
  */
@@ -47,7 +47,7 @@ class Response {
 
     /**
      * Used for storing Singleton instance.
-     * 
+     *
      * @var \FluitoPHP\Response\Response
      * @author Neha Jain
      * @since  0.1
@@ -56,7 +56,7 @@ class Response {
 
     /**
      * Used for storing View instance.
-     * 
+     *
      * @var \FluitoPHP\View\View
      * @author Neha Jain
      * @since  0.1
@@ -65,7 +65,7 @@ class Response {
 
     /**
      * Used for storing HTTP Status codes and their text message.
-     * 
+     *
      * @var array
      * @author Neha Jain
      * @since  0.1
@@ -136,17 +136,17 @@ class Response {
 
     /**
      * Private constructor to use this class as a singleton class.
-     * 
+     *
      * @author Neha Jain
      * @since  0.1
      */
     private function __construct() {
-        
+
     }
 
     /**
      * Used to fetch the singleton instance object.
-     * 
+     *
      * @return \FluitoPHP\Response\Response
      * @author Neha Jain
      * @since  0.1
@@ -163,7 +163,7 @@ class Response {
 
     /**
      * Used for Setting up Response object.
-     * 
+     *
      * @author Neha Jain
      * @since  0.1
      */
@@ -175,7 +175,7 @@ class Response {
 
     /**
      * Used to run the response.
-     * 
+     *
      * @author Neha Jain
      * @since  0.1
      */
@@ -195,7 +195,7 @@ class Response {
 
     /**
      * Used to run the response error handler.
-     * 
+     *
      * @author Neha Jain
      * @since  0.1
      */
@@ -215,7 +215,7 @@ class Response {
 
     /**
      * Used to set response headers.
-     * 
+     *
      * @param string $header Provide the header string.
      * @param bool $replace Provide false if you want to add the same header type instead of replacing.
      * @param int $http_response_code Provide the http response code.
@@ -249,22 +249,30 @@ class Response {
 
     /**
      * Used to set response location headers.
-     * 
+     *
      * @param string $url Provide the url string.
+     * @param bool $type Provide true if the type of redirect is 301 permanent.
      * @author Neha Jain
      * @since  0.1
      */
-    public function SetLocation($url) {
+    public function SetLocation($url, $type = false) {
 
-        $this->
-                SetHeader("Location: {$url}");
+        if (!$type) {
+
+            $this->
+                    SetHeader("Location: {$url}");
+        } else {
+
+            $this->
+                    SetHeader("Location: {$url}", true, 301);
+        }
 
         exit;
     }
 
     /**
      * Used to set response refresh headers.
-     * 
+     *
      * @param string $url Provide the url string.
      * @param int $time Provide the time in seconds after which to refresh.
      * @return bool Returns true on success and false on failure.
@@ -281,7 +289,7 @@ class Response {
 
     /**
      * Used to set HTTP status code.
-     * 
+     *
      * @param string $code Provide the HTTP code.
      * @param string $message Provide custom message for the code.
      * @return bool Returns true on success and false on failure.
@@ -309,7 +317,7 @@ class Response {
 
     /**
      * Used to get current View object.
-     * 
+     *
      * @return \FluitoPHP\View\View Returns current View object.
      * @author Neha Jain
      * @since  0.1
@@ -322,7 +330,7 @@ class Response {
 
     /**
      * Used to set browser cookie.
-     * 
+     *
      * @param string $name Provide the cookie name.
      * @param string $value Provide the cookie value.
      * @param int $expire Provide the expiration time in seconds. Zero will make the cookie expire at the end of the session when the browser closes.
@@ -346,7 +354,7 @@ class Response {
 
     /**
      * Used to set response content type headers.
-     * 
+     *
      * @param string $url Provide the content type string.
      * @author Neha Jain
      * @since  0.1
