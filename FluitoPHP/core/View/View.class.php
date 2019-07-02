@@ -145,6 +145,10 @@ class View extends \FluitoPHP\Base\Base {
      */
     public function Run() {
 
+
+        $this->
+                RefreshView();
+
         if (!file_exists($this->
                         view) &&
                 !file_exists(MODULE . DS . $this->
