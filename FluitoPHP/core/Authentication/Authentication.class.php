@@ -732,42 +732,40 @@ class Authentication {
                         Cookie($this->
                                 config['id']), true);
 
-        if (!isset($cookie['salt_id'])) {
+        if (isset($cookie['salt_id'])) {
 
-            return false;
-        }
+            $saltRow = $this->
+                    database->
+                    Conn($this->
+                            GetConn())->
+                    Helper()->
+                    Select($this->
+                            GetPrefix() . 'usersalt', array(
+                        'user_id',
+                        'salt'
+                            ), array(
+                        array(
+                            'column' => 'salt_id',
+                            'operator' => '=',
+                            'rightvalue' => $cookie['salt_id']
+                        )
+                    ))->
+                    GetRow();
 
-        $saltRow = $this->
-                database->
-                Conn($this->
-                        GetConn())->
-                Helper()->
-                Select($this->
-                        GetPrefix() . 'usersalt', array(
-                    'user_id',
-                    'salt'
-                        ), array(
-                    array(
-                        'column' => 'salt_id',
-                        'operator' => '=',
-                        'rightvalue' => $cookie['salt_id']
-                    )
-                ))->
-                GetRow();
+            if ($saltRow) {
 
-        if ($saltRow) {
+                if ($this->
+                                PasswordVerify($cookie['salt'], $saltRow['salt'])) {
 
-            if ($this->
-                            PasswordVerify($cookie['salt'], $saltRow['salt'])) {
+                    $user = new \FluitoPHP\Authentication\User($saltRow['user_id']);
 
-                $user = new \FluitoPHP\Authentication\User($saltRow['user_id']);
+                    if ($user &&
+                                    $user->
+                                    GetUserID()) {
 
-                if ($user &&
-                                $user->
-                                GetUserID()) {
-
-                    $this->
-                            currentUser = $user;
+                        $this->
+                                currentUser = $user;
+                    }
                 }
             }
         }
