@@ -584,11 +584,12 @@ class Session {
     /**
      * Used to destroy the sessions as per required.
      *
+     * @param sstring $id Provide the Session ID here to destroy.
      * @return bool Returns true on success and false on failure.
      * @author Neha Jain
      * @since  0.1
      */
-    public function Destroy() {
+    public function Destroy($id) {
 
         if ($this->
                 initConfig['database']) {
