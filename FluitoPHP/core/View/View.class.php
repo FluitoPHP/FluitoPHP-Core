@@ -25,11 +25,12 @@ namespace FluitoPHP\View;
  *      1. $header
  *      2. $footer
  *      3. $view
- *      4. $errorHeader
- *      5. $errorFooter
- *      6. $errorView
- *      7. $title
- *      8. $errorTitle
+ *      4. $altView
+ *      5. $errorHeader
+ *      6. $errorFooter
+ *      7. $errorView
+ *      8. $title
+ *      9. $errorTitle
  *
  * Functions:
  *      1. __construct
@@ -77,6 +78,15 @@ class View extends \FluitoPHP\Base\Base {
      * @since  0.1
      */
     private $view = null;
+
+    /**
+     * Used to store the alternate folder based view template.
+     *
+     * @var string
+     * @author Neha Jain
+     * @since  0.1
+     */
+    private $altView = null;
 
     /**
      * Used to store the error header template.
@@ -154,7 +164,11 @@ class View extends \FluitoPHP\Base\Base {
                 !file_exists(MODULE . DS . $this->
                                 Request()->
                                 GetModule() . VIEWS . DS . $this->
-                        view . '.php')) {
+                        view . '.php') &&
+                !file_exists(MODULE . DS . $this->
+                                Request()->
+                                GetModule() . VIEWS . DS . $this->
+                        altView . '.php')) {
 
             throw new \FluitoPHP\HttpException\HttpException("Error: View not found");
         }
@@ -182,12 +196,20 @@ class View extends \FluitoPHP\Base\Base {
 
             require($this->
                     view);
-        } else {
+        } else if (file_exists(MODULE . DS . $this->
+                                Request()->
+                                GetModule() . VIEWS . DS . $this->
+                        view . '.php')) {
 
             require(MODULE . DS . $this->
                             Request()->
                             GetModule() . VIEWS . DS . $this->
                     view . '.php');
+        } else {
+            require(MODULE . DS . $this->
+                            Request()->
+                            GetModule() . VIEWS . DS . $this->
+                    altView . '.php');
         }
 
         if (file_exists($this->
@@ -458,6 +480,13 @@ class View extends \FluitoPHP\Base\Base {
                         GetController() . ucfirst($this->
                                 Request()->
                                 GetAction());
+
+        $this->
+                altView = $this->
+                        Request()->
+                        GetController() . DS . $this->
+                        Request()->
+                        GetAction();
     }
 
     /**
