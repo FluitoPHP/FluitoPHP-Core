@@ -801,6 +801,10 @@ class Request {
         $this->
                 PreRun();
 
+        \FluitoPHP\Response\Response::GetInstance()->
+                View()->
+                RefreshView();
+
         $controllerClass = '\\' . $this->
                 controller . 'Controller';
 
@@ -1264,8 +1268,8 @@ class Request {
                             defaultController . 'Controller.class.php')) {
 
                 throw new \FluitoPHP\HttpException\HttpException('Controller (' . $this->
-                controller . ') not found in Module (' . $this->
-                module . ').', 404);
+                        controller . ') not found in Module (' . $this->
+                        module . ').', 404);
             }
 
             if ($this->
@@ -1329,9 +1333,9 @@ class Request {
                             defaultAction . 'Action', $classMethods)) {
 
                 throw new \FluitoPHP\HttpException\HttpException('Action (' . $this->
-                action . ') not found in Module (' . $this->
-                module . ').Controller (' . $this->
-                controller . ').', 404);
+                        action . ') not found in Module (' . $this->
+                        module . ').Controller (' . $this->
+                        controller . ').', 404);
             }
 
             $this->
