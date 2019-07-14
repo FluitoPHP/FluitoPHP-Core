@@ -174,7 +174,7 @@ class Authentication {
                         Select($this->
                                 GetPrefix() . 'usersalt', '*', array(
                             array(
-                                'column' => "&DateAdd(logged_on, {$this->
+                                'column' => "&DateAdd(last_access, {$this->
                                 config['expire']}, S)",
                                 'operator' => '<',
                                 'rightcolumn' => '&CurrDTTM'
@@ -191,7 +191,7 @@ class Authentication {
                 Delete($this->
                         GetPrefix() . 'usersalt', array(
                     array(
-                        'column' => "&DateAdd(logged_on, {$this->
+                        'column' => "&DateAdd(last_access, {$this->
                         config['expire']}, S)",
                         'operator' => '<',
                         'rightcolumn' => '&CurrDTTM'
@@ -427,6 +427,10 @@ class Authentication {
                             'isnull' => false
                         ),
                         'logged_on' => array(
+                            'type' => 'DATETIME',
+                            'isnull' => false
+                        ),
+                        'last_access' => array(
                             'type' => 'DATETIME',
                             'isnull' => false
                         )
@@ -676,7 +680,8 @@ class Authentication {
                             Server('HTTP_USER_AGENT'),
                     'ip_address' => \FluitoPHP\Request\Request::GetInstance()->
                     Server('REMOTE_ADDR'),
-                    'logged_on' => array('function' => '&CurrDTTM')
+                    'logged_on' => array('function' => '&CurrDTTM'),
+                    'last_access' => array('function' => '&CurrDTTM')
                         )
                 )->
                 Query();
@@ -710,11 +715,12 @@ class Authentication {
     /**
      * Used to get logged in user else system user.
      *
+     * @param bool $noReset Provide true if you want to just check the login and not update the access time. Default: false
      * @return \FluitoPHP\Authentication\User Returns user if logged in else returns system user.
      * @author Neha Jain
      * @since  0.1
      */
-    public function GetUser() {
+    public function GetUser($noReset = false) {
 
         if ($this->
                 currentUser &&
@@ -765,6 +771,28 @@ class Authentication {
 
                         $this->
                                 currentUser = $user;
+
+                        if (!$noReset) {
+
+                            $this->
+                                    database->
+                                    Conn($this->
+                                            GetConn())->
+                                    Helper()->
+                                    Update($this->
+                                            GetPrefix() . 'usersalt', array(
+                                        'last_access' => array('function' => '&CurrDTTM')
+                                            ),
+                                            array(
+                                                array(
+                                                    'column' => 'salt_id',
+                                                    'operator' => '=',
+                                                    'rightvalue' => $cookie['salt_id']
+                                                )
+                                            )
+                                    )->
+                                    Query();
+                        }
                     }
                 }
             }
@@ -787,14 +815,15 @@ class Authentication {
     /**
      * Used to get logged in user.
      *
+     * @param bool $noReset Provide true if you want to just check the login and not update the access time. Default: false
      * @return \FluitoPHP\Authentication\User Returns user if logged in else returns false.
      * @author Neha Jain
      * @since  0.1
      */
-    public function GetLoggedInUser() {
+    public function GetLoggedInUser($noReset = false) {
 
         if ($this->
-                        GetUser()->
+                        GetUser($noReset)->
                         GetUserID() === 'system') {
 
             return false;
