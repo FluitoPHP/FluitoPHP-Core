@@ -387,7 +387,7 @@ class Request {
     }
 
     /**
-     * Used to get the module name.
+     * Used to setup the request for further processing.
      *
      * @throws \FluitoPHP\HttpException\HttpException Throws this exception if the path can not be found.
      * @throws \Exception Throws this exception if the controller class in not properly defined.
