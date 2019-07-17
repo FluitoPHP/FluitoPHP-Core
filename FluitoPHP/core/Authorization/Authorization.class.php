@@ -322,10 +322,10 @@ class Authorization {
                             'permissions' => array(
                                 'administrator'
                             )
-                ));
+                                ), true);
             }
 
-            $userRole = new \FluitoPHP\Authorization\UserRoles('administrator');
+            $userRole = new \FluitoPHP\Authorization\UserRoles(new \FluitoPHP\Authentication\User('administrator'));
 
             if (!in_array('administrator', $userRole->
                                     GetUserRoles())) {

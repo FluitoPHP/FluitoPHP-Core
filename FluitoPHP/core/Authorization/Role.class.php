@@ -329,14 +329,16 @@ class Role {
      * Used to update/create a role.
      *
      * @param array $data Provide the details for the role. 'role' key is mandatory in case of create.
+     * @param bool $adminEdit Provide true if you want to edit administrator role. Caution this should be used only by internal functions.
      * @return mixed Returns true if created/updated else \FluitoPHP\Error\Error will be returned.
      * @author Neha Jain
      * @since  0.1
      */
-    public function SetRoleData($data) {
+    public function SetRoleData($data, $adminEdit = false) {
 
         if ($this->
-                role === 'administrator') {
+                role === 'administrator' &&
+                !$adminEdit) {
 
             return new \FluitoPHP\Error\Error('Cannot update administrator role.', 'setroledata_admin_role');
         }
@@ -405,6 +407,10 @@ class Role {
                         )
                 )->
                 GetVar();
+
+        if (!$eff_dttm) {
+            $eff_dttm = array('function' => '&CurrDTTM');
+        }
 
         $filterReturn = \FluitoPHP\Filters\Filters::GetInstance()->
                 Run('FluitoPHP.Authentication.Role.SetRoleData.Validate', true, $role, $data, $eff_dttm, $this);
