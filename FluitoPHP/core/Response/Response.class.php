@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -40,7 +40,7 @@ namespace FluitoPHP\Response;
  *      11. SetCookie
  *      12. SetContentType
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class Response {
@@ -49,7 +49,7 @@ class Response {
      * Used for storing Singleton instance.
      *
      * @var \FluitoPHP\Response\Response
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static private $instance = null;
@@ -58,7 +58,7 @@ class Response {
      * Used for storing View instance.
      *
      * @var \FluitoPHP\View\View
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $view = null;
@@ -67,7 +67,7 @@ class Response {
      * Used for storing HTTP Status codes and their text message.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $httpCodes = array(
@@ -137,7 +137,7 @@ class Response {
     /**
      * Private constructor to use this class as a singleton class.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private function __construct() {
@@ -148,7 +148,7 @@ class Response {
      * Used to fetch the singleton instance object.
      *
      * @return \FluitoPHP\Response\Response
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static public function GetInstance() {
@@ -164,7 +164,7 @@ class Response {
     /**
      * Used for Setting up Response object.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Setup() {
@@ -176,7 +176,7 @@ class Response {
     /**
      * Used to run the response.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Run() {
@@ -196,7 +196,7 @@ class Response {
     /**
      * Used to run the response error handler.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function HandleError() {
@@ -220,7 +220,7 @@ class Response {
      * @param bool $replace Provide false if you want to add the same header type instead of replacing.
      * @param int $http_response_code Provide the http response code.
      * @return bool Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetHeader($header, $replace = true, $http_response_code = null) {
@@ -252,7 +252,7 @@ class Response {
      *
      * @param string $url Provide the url string.
      * @param bool $type Provide true if the type of redirect is 301 permanent.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetLocation($url, $type = false) {
@@ -276,7 +276,7 @@ class Response {
      * @param string $url Provide the url string.
      * @param int $time Provide the time in seconds after which to refresh.
      * @return bool Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetRefresh($url, $time = 0) {
@@ -293,7 +293,7 @@ class Response {
      * @param string $code Provide the HTTP code.
      * @param string $message Provide custom message for the code.
      * @return bool Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetHTTPCode($code, $message = "") {
@@ -319,7 +319,7 @@ class Response {
      * Used to get current View object.
      *
      * @return \FluitoPHP\View\View Returns current View object.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function View() {
@@ -339,7 +339,7 @@ class Response {
      * @param bool $secure Provide if the cookie is only to be setup on secure connection.
      * @param bool $httponly Provide if the generated cookie can be access only by http channels and not by client side scripts.
      * @return bool Returns true if there is no output sent and the function successfully ran. though it does not guarantee that the client accepted the cookie.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetCookie($name, $value = "", $expire = 0, $path = "", $domain = "", $secure = false, $httponly = false) {
@@ -356,7 +356,7 @@ class Response {
      * Used to set response content type headers.
      *
      * @param string $url Provide the content type string.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetContentType($contentType) {

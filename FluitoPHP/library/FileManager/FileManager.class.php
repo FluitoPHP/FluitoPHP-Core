@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -54,7 +54,7 @@ namespace FluitoPHP\FileManager;
  *      13. GetBreadcrumbInfo
  *      14. CreateDirectory
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class FileManager {
@@ -62,7 +62,7 @@ class FileManager {
     /**
      * Used when the Upload method is triggered and the request is not of POST type.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     const UPLOAD_NO_POST = 100;
@@ -70,7 +70,7 @@ class FileManager {
     /**
      * Used when an invalid identifier is provided to the Upload method.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     const UPLOAD_INVALID_FILE_ID = 101;
@@ -78,7 +78,7 @@ class FileManager {
     /**
      * Used when the uploaded file with identifier is not found.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     const UPLOAD_FILE_ID_NOT_FOUND = 102;
@@ -86,7 +86,7 @@ class FileManager {
     /**
      * Used when file mime type do not match in mime types provided to the Upload method.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     const UPLOAD_FILE_MIME_NO_MATCH = 103;
@@ -94,7 +94,7 @@ class FileManager {
     /**
      * Used when file size is greater than max size provided to the Upload method.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     const UPLOAD_FILE_EXCEEDS_MAX_SIZE = 104;
@@ -102,7 +102,7 @@ class FileManager {
     /**
      * Used when file size is smaller than min size provided to the Upload method.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     const UPLOAD_FILE_BELOW_MIN_SIZE = 105;
@@ -110,7 +110,7 @@ class FileManager {
     /**
      * Used when the mime of the file matches restricted mime types.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     const UPLOAD_FILE_MIME_RESTRICTED = 106;
@@ -119,7 +119,7 @@ class FileManager {
      * Used to store the base path of the directory.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $basePath = null;
@@ -128,7 +128,7 @@ class FileManager {
      * Used to store the default path and used if the path provided to the constructor is not valid.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $defaultPath = null;
@@ -137,7 +137,7 @@ class FileManager {
      * Used to trim the path of the file for URL Generation.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $URLTrimPath = '';
@@ -146,7 +146,7 @@ class FileManager {
      * Used to append to the path of the file for URL Generation.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $URLPrefix = '';
@@ -155,7 +155,7 @@ class FileManager {
      * Used to trim the path of the file for thumbnail URL Generation.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $thumbURLTrimPath = '';
@@ -164,7 +164,7 @@ class FileManager {
      * Used to append to the path of the file for thumbnail URL Generation.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $thumbURLPrefix = '';
@@ -173,7 +173,7 @@ class FileManager {
      * Used to store the files configuration.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static protected $filesConfig = null;
@@ -182,7 +182,7 @@ class FileManager {
      * Used to store the restricted mime types.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static protected $restrictedMimes = array(
@@ -200,7 +200,7 @@ class FileManager {
      *              'thumbURLTrimPath' Provide the thumbnail URL trim path.
      *              'thumbURLPrefix' Provide the thumbnail URL prefix.
      * @throws \Exception
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function __construct($config = array()) {
@@ -316,7 +316,7 @@ class FileManager {
      * @param bool $listDirectories Provide true if the subdirectories needs to be listed.
      * @param bool $showHidden Provide true if the hidden files and directories (i.e. starting with .) needs to be listed.
      * @return array Returns the list of files and folders in a subpath.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function ListPath($subPath = '', $extensions = [], $listDirectories = true, $showHidden = false) {
@@ -391,7 +391,7 @@ class FileManager {
      * @param int $maxSize Provide the maximum size of the file.
      * @param int $minSize Provide the minimum size of the file.
      * @return mixed Returns name of file on success else returns failure code. And returns failure code or array of names/errors.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Upload($id, $name = '', $subPath = '', $validMimes = [], $maxSize = 0, $minSize = 0) {
@@ -519,7 +519,7 @@ class FileManager {
      * @param string $saveName Provide the name for the file to save.
      * @param string $subPath Provide the subpath to save the file is required.
      * @return mixed Returns generated filename on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function MoveUploadedFile($tmpFileName, $saveName, $subPath = '') {
@@ -618,7 +618,7 @@ class FileManager {
      *
      * @param mixed $files Provide the filepath or array of file paths.
      * @return mixed Returns true on success and false on failure or in case of multiple files, array of bool values is returned with respective keys from files array.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Delete($files) {
@@ -689,7 +689,7 @@ class FileManager {
      *
      * @param string $folder Provide the folder path.
      * @return bool Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function DeleteDirectory($folder) {
@@ -729,7 +729,7 @@ class FileManager {
      * @param mixed $files Provide the filepath or array of file paths to be copied.
      * @param string $subPath Provide the subpath where the files needs to be copied.
      * @return mixed Returns true on success and false on failure or in case of multiple files, array of bool values is returned with respective keys from files array.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Copy($files, $subPath) {
@@ -853,7 +853,7 @@ class FileManager {
      * @param string $source Provide the source path to copy.
      * @param string $destination Provide the destination path.
      * @return bool Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function CopyDirectory($source, $destination) {
@@ -898,7 +898,7 @@ class FileManager {
      * @param mixed $files Provide the filepath or array of file paths to be moved.
      * @param string $subPath Provide the subpath where the files needs to be moved.
      * @return mixed Returns true on success and false on failure or in case of multiple files, array of bool values is returned with respective keys from files array.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Move($files, $subPath) {
@@ -1019,7 +1019,7 @@ class FileManager {
      * @param string $newName Provide the new name of the file.
      * @param bool $changeExtn Provide false if you do not want the extension of the file to be updated.
      * @return mixed Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Rename($file, $newName, $changeExtn = false) {
@@ -1069,7 +1069,7 @@ class FileManager {
      * Used to get the base path of the file manager.
      *
      * @return string Returns the base path from the file manager.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetBasePath() {
@@ -1086,7 +1086,7 @@ class FileManager {
      * @param bool $listDirectories Provide true if the subdirectories needs to be listed.
      * @param bool $showHidden Provide true if the hidden files and directories (i.e. starting with .) needs to be listed.
      * @return array Returns the list of attributes of the subpath else returns false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetPathInfo($subPath = '', $extensions = [], $listDirectories = true, $showHidden = false) {
@@ -1214,7 +1214,7 @@ class FileManager {
      * @param bool $listDirectories Provide true if the subdirectories needs to be listed.
      * @param bool $showHidden Provide true if the hidden files and directories (i.e. starting with .) needs to be listed.
      * @return array Returns the list of breadcrumbs to current subpath.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetBreadcrumbInfo($subPath = '', $extensions = [], $listDirectories = true, $showHidden = false) {
@@ -1267,7 +1267,7 @@ class FileManager {
      * @param string $directoryName Provide the name of the directory that needs to be created.
      * @param string $subPath Provide the subpath where the directory needs to be created.
      * @return bool Returns directory name on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function CreateDirectory($directoryName, $subPath = '') {

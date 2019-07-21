@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -38,7 +38,7 @@ namespace FluitoPHP\Database;
  *      7. Shutdown
  *      8. Conn
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class Database {
@@ -47,7 +47,7 @@ class Database {
      * Used for storing Singleton instance.
      *
      * @var \FluitoPHP\Database\Database
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static private $instance = null;
@@ -56,7 +56,7 @@ class Database {
      * Used for storing InitStarted flag.
      *
      * @var bool
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static private $initStarted = false;
@@ -65,7 +65,7 @@ class Database {
      * Used for storing InitStarted flag for module.
      *
      * @var bool
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static private $initStartedModule = false;
@@ -74,7 +74,7 @@ class Database {
      * Used to store the connections in an associated array.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $connections = [];
@@ -83,7 +83,7 @@ class Database {
      * Used to store default connection key.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $defaultConn = 'default';
@@ -92,7 +92,7 @@ class Database {
      * Private constructor to use this class as a singleton class.
      *
      * @return void Return is called in the constructor if the initialization is already started, to avoid looping and displaying 500 error.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private function __construct() {
@@ -103,7 +103,7 @@ class Database {
      * Used to fetch the Instance object globally.
      *
      * @return \FluitoPHP\Database\Database Returns this instance object.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static public function GetInstance() {
@@ -119,7 +119,7 @@ class Database {
     /**
      * Used to setup the databases.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Setup() {
@@ -179,7 +179,7 @@ class Database {
     /**
      * Used to setup the databases.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetupModule() {
@@ -251,7 +251,7 @@ class Database {
      * @param object $data Provide the connection details in the object.
      * @return bool Returns true on success and false on error.
      * @throws \Exception Throws exception if the helper class is faulty.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function CreateConns($id, $data) {
@@ -356,7 +356,7 @@ class Database {
      *
      * @param string $id Provide the identifier which was used at the time of connection.
      * @return bool Returns true on success and false on error.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function DestroyConns($id = null) {
@@ -384,7 +384,7 @@ class Database {
      * Used to destroy all DB connections at the end of runtime. This method is invoked at the Shutdown Action.
      *
      * @throws \Exception Throws exception if any connection fails to disconnect.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Shutdown() {
@@ -405,7 +405,7 @@ class Database {
      *
      * @param string $id Provide the connection identifier to fetch the connection and query on the same.
      * @return \FluitoPHP\Database\DBConnectionHelper The helper class is returned having this \FluitoPHP\Database\DBConnectionHelper interface implemented.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Conn($id = null) {

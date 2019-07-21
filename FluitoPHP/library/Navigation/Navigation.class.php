@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -43,7 +43,7 @@ namespace FluitoPHP\Navigation;
  *      13. Generate
  *      14. Render
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class Navigation extends \FluitoPHP\Base\Base {
@@ -52,7 +52,7 @@ class Navigation extends \FluitoPHP\Base\Base {
      * Used to store the configuration of the navigation.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $config = array(
@@ -168,7 +168,7 @@ class Navigation extends \FluitoPHP\Base\Base {
      * Used to store the elements of the navigation.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $elements = array();
@@ -177,7 +177,7 @@ class Navigation extends \FluitoPHP\Base\Base {
      * Used to store parent navigation if this instance is a sub-navigation.
      *
      * @var \FluitoPHP\Navigation\Navigation
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $parentNav = null;
@@ -186,7 +186,7 @@ class Navigation extends \FluitoPHP\Base\Base {
      * Used to get application configuration of the class.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static protected $appConfig = null;
@@ -196,7 +196,7 @@ class Navigation extends \FluitoPHP\Base\Base {
      *
      * @param array $config Provide the configuration options.
      * @param \FluitoPHP\Navigation\Navigation $parentNav Provide parent navigation if this is a sub-navigation.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     function __construct($config = [], $parentNav = null) {
@@ -265,7 +265,7 @@ class Navigation extends \FluitoPHP\Base\Base {
      *
      * @param array $config Provide the configuration options.
      * @param \FluitoPHP\Navigation\Navigation $parentNav Provide parent navigation if this is a sub-navigation.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function UpdateConfig($config = [], $parentNav = null) {
@@ -326,7 +326,7 @@ class Navigation extends \FluitoPHP\Base\Base {
      * @param array $params Provide additional parameters.
      * @param int $position Provide the position number (valid positive integer including zero). Providing any other parameter will make it append to the last.
      * @return mixed Returns actual element position or returns false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function AddElement($name, $url, $title = null, $params = [], $position = null) {
@@ -403,7 +403,7 @@ class Navigation extends \FluitoPHP\Base\Base {
      * @param array $params Provide additional parameters.
      * @param int $position Provide the position number (valid positive integer including zero). Providing any other parameter will make it append to the last.
      * @return \FluitoPHP\Navigation\Navigation Returns self reference for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function AddSeparator($params = [], $position = null) {
@@ -444,7 +444,7 @@ class Navigation extends \FluitoPHP\Base\Base {
      *
      * @param int $position Provide the position of the element to be reomved.
      * @return mixed Returns false if the element do not exists or returns the removed element.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function RemoveElement($position) {
@@ -467,7 +467,7 @@ class Navigation extends \FluitoPHP\Base\Base {
      *
      * @param int $position Provide the position of the element.
      * @return bool Returns true if the element exists and no sub-navigation is set as active else false.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetActive($position) {
@@ -491,7 +491,7 @@ class Navigation extends \FluitoPHP\Base\Base {
     /**
      * Used to set the active element of the navigation as non active.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function RemoveActive() {
@@ -530,7 +530,7 @@ class Navigation extends \FluitoPHP\Base\Base {
      *
      * @param int $position Provide the position of the element.
      * @return array Returns the element if the position is found or returns all the elements if the position is null/false or equivalent.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetElement($position = null) {
@@ -557,7 +557,7 @@ class Navigation extends \FluitoPHP\Base\Base {
      *
      * @param int $position Provide the position number of the element for which sub navigation has to be edited.
      * @return \FluitoPHP\Navigation\Navigation Returns the sub-navigation object.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetSubNav($position) {
@@ -591,7 +591,7 @@ class Navigation extends \FluitoPHP\Base\Base {
      * Used to check if the element is a sub navigation.
      *
      * @return bool Returns true if this is a sub-navigation.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function IsSubNav() {
@@ -604,7 +604,7 @@ class Navigation extends \FluitoPHP\Base\Base {
      * Used to check if there is an active element in the navigation.
      *
      * @return mixed Returns key of active element if there is an active element in the navigation.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function ContainsActive() {
@@ -631,7 +631,7 @@ class Navigation extends \FluitoPHP\Base\Base {
      *
      * @param array $element Provide the element array.
      * @return string Returns the generated element.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function GenerateElement($element) {
@@ -1123,7 +1123,7 @@ class Navigation extends \FluitoPHP\Base\Base {
      *
      * @param string $filter Provide the name of the filter to be applied on the elements array.
      * @return mixed Returns the generated html of the navigation or generated array of the subnav.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Generate($filter = null) {
@@ -1270,7 +1270,7 @@ class Navigation extends \FluitoPHP\Base\Base {
      * Sub-navigation will not get rendered.
      *
      * @param string $filter Provide the name of the filter to be applied on the elements array.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Render($filter = null) {

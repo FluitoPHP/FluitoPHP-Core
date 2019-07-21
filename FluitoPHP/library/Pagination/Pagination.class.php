@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -40,7 +40,7 @@ namespace FluitoPHP\Pagination;
  *      6. Generate
  *      7. Render
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class Pagination extends \FluitoPHP\Base\Base {
@@ -49,7 +49,7 @@ class Pagination extends \FluitoPHP\Base\Base {
      * Used to store the configuration of the pagination.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $config = array(
@@ -151,7 +151,7 @@ class Pagination extends \FluitoPHP\Base\Base {
      * Used to store the url of the pagination. Use $1 to replace with the page number.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $url = null;
@@ -160,7 +160,7 @@ class Pagination extends \FluitoPHP\Base\Base {
      * Used to store the total pages of the pagination.
      *
      * @var int
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $totalPages = 1;
@@ -169,7 +169,7 @@ class Pagination extends \FluitoPHP\Base\Base {
      * Used to store the current page of the pagination.
      *
      * @var int
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $currentPage = 1;
@@ -178,7 +178,7 @@ class Pagination extends \FluitoPHP\Base\Base {
      * Used to store the type, either pagination (0) or pager (1).
      *
      * @var int
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $type = 0;
@@ -187,7 +187,7 @@ class Pagination extends \FluitoPHP\Base\Base {
      * Used to store the number of links to show at a time.
      *
      * @var int
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $linksToShow = 5;
@@ -196,7 +196,7 @@ class Pagination extends \FluitoPHP\Base\Base {
      * Used to get application configuration of the class.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static protected $appConfig = null;
@@ -205,7 +205,7 @@ class Pagination extends \FluitoPHP\Base\Base {
      * Used to increment at separator generation for use in html id attribute.
      *
      * @var int
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $sepId = 0;
@@ -214,7 +214,7 @@ class Pagination extends \FluitoPHP\Base\Base {
      * Constructor to initialize this class.
      *
      * @param array $config Provide the arguments in associative array. Provide parameters same as UpdateConfig method.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     function __construct($config = []) {
@@ -379,7 +379,7 @@ class Pagination extends \FluitoPHP\Base\Base {
      * @param int $type Provide 0 to render pagination and 1 for pager.
      * @param int $linksToShow Provide the number of links to show in case of pagination.
      * @param array $config Provide the configuration options.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function UpdateConfig($url, $totalPages, $currentPage = null, $type = null, $linksToShow = null, $config = []) {
@@ -481,7 +481,7 @@ class Pagination extends \FluitoPHP\Base\Base {
      * @param int $type Provide true if the element is currently active.
      * @param int $linksToShow Provide additional parameters.
      * @return \FluitoPHP\Pagination\Pagination Returns self reference for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Setup($url, $totalPages = 1, $currentPage = 1, $type = 0, $linksToShow = 5) {
@@ -503,7 +503,7 @@ class Pagination extends \FluitoPHP\Base\Base {
      * @param int $pageNumber Provide the page number for which the html to be generated. 0 means previous button and > $totalPages means next button.
      * @param bool $disableActive Provide true if needs to be disabled.
      * @return string Returns the generated html of the element.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function GenerateElement($pageNumber, $disableActive = false) {
@@ -875,7 +875,7 @@ class Pagination extends \FluitoPHP\Base\Base {
      * Used to generate the html of the separator.
      *
      * @return string Returns the generated html of the separator.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function GenerateSeparator() {
@@ -984,7 +984,7 @@ class Pagination extends \FluitoPHP\Base\Base {
      *
      * @param string $filter Provide the name of the filter to be applied on the elements array.
      * @return string Returns the generated html of the pagination/pager.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Generate($filter = null) {
@@ -1205,7 +1205,7 @@ class Pagination extends \FluitoPHP\Base\Base {
      * Used to render the pagination/pager.
      *
      * @param string $filter Provide the name of the filter to be applied on the elements array.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Render($filter = null) {

@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -17,7 +17,7 @@
  * Used for storing the Environment Type.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('ENV')) {
@@ -31,7 +31,7 @@ if (!defined('ENV')) {
  * Used for storing the directory separator.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('DS')) {
@@ -45,7 +45,7 @@ if (!defined('DS')) {
  * Used for storing the application absolute path.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('ABSOLUTE')) {
@@ -59,7 +59,7 @@ if (!defined('ABSOLUTE')) {
  * Specify Framework and application Parent directory. Used for storing the application directory path, includes both framework files and application
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('FRAMEWORK')) {
@@ -73,7 +73,7 @@ if (!defined('FRAMEWORK')) {
  * Used for storing extensions path.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('EXTENSIONS')) {
@@ -87,7 +87,7 @@ if (!defined('EXTENSIONS')) {
  * Used for storing application path.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('APP')) {

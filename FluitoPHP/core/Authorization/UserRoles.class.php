@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -37,7 +37,7 @@ namespace FluitoPHP\Authorization;
  *      5. GetUserPermissions
  *      6. ValidatePermission
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class UserRoles {
@@ -46,7 +46,7 @@ class UserRoles {
      * Used for storing Authentication User object.
      *
      * @var \FluitoPHP\Authentication\User
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $user = null;
@@ -55,7 +55,7 @@ class UserRoles {
      * Used for storing user roles.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $roles = null;
@@ -64,7 +64,7 @@ class UserRoles {
      * Used for storing user permissions.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $permissions = null;
@@ -73,7 +73,7 @@ class UserRoles {
      * Used to store the authentication instance.
      *
      * @var \FluitoPHP\Authentication\Authentication
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $authentication = null;
@@ -82,7 +82,7 @@ class UserRoles {
      * Used to store the authorization instance.
      *
      * @var \FluitoPHP\Authorization\Authorization
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $authorization = null;
@@ -91,7 +91,7 @@ class UserRoles {
      * Used to store the database instance.
      *
      * @var \FluitoPHP\Database\Database
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $database = null;
@@ -100,7 +100,7 @@ class UserRoles {
      * Used to initialize the user roles object.
      *
      * @param \FluitoPHP\Authentication\User $user Provide the user object.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     function __construct($user) {
@@ -129,7 +129,7 @@ class UserRoles {
      * Used to get the User object.
      *
      * @return \FluitoPHP\Authentication\User Returns the User object else false.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetUser() {
@@ -148,7 +148,7 @@ class UserRoles {
      * Used to get the User Roles.
      *
      * @return array Returns the list of User roles.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetUserRoles() {
@@ -280,7 +280,7 @@ class UserRoles {
      *
      * @param array $roles Provide the list of roles that needs to set for the user.
      * @return bool Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetUserRoles($roles) {
@@ -445,7 +445,7 @@ class UserRoles {
      * Used to get the User Permissions.
      *
      * @return array Returns the list of user permissions
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetUserPermissions() {
@@ -561,7 +561,7 @@ class UserRoles {
      *
      * @param string $permission Provide the permission against which the user needs to be validated.
      * @return bool Returns true if the user is valid for the permission provided.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function ValidatePermission($permission) {

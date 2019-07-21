@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -43,7 +43,7 @@ namespace FluitoPHP\ImageFile;
  *      13. GetImageFuncSuffix
  *      14. Render
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class ImageFile {
@@ -52,7 +52,7 @@ class ImageFile {
      * Used for storing image file path.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $imagePath = null;
@@ -61,7 +61,7 @@ class ImageFile {
      * Used to store the image info.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $imageInfo = [];
@@ -70,7 +70,7 @@ class ImageFile {
      * Used to store the image configuration from configuration files.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static protected $imagesConfig = null;
@@ -79,7 +79,7 @@ class ImageFile {
      * Used to store the mime to function conversions
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static protected $mimeToFunction = array(
@@ -98,7 +98,7 @@ class ImageFile {
      *
      * @param string $imagePath Provide path of the image file.
      * @throws \Exception Throws exception if the image file is not found or is not an image.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function __construct($imagePath) {
@@ -128,7 +128,7 @@ class ImageFile {
      * @param string $imagePath Provide path of the image file.
      * @return $this Self reference is returned for chained calls.
      * @throws \Exception Throws exception if the image file is not found or is not an image.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetImagePath($imagePath) {
@@ -157,7 +157,7 @@ class ImageFile {
      * Used to get the image filepath.
      *
      * @return string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetImagePath() {
@@ -170,7 +170,7 @@ class ImageFile {
      * Used to get X size of the image file.
      *
      * @return int Returns the horizontal size of the image file.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetX() {
@@ -183,7 +183,7 @@ class ImageFile {
      * Used to get Y size of the image file.
      *
      * @return int Returns the vertical size of the image file.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetY() {
@@ -196,7 +196,7 @@ class ImageFile {
      * Used to get size string of the image file. Possible uses in image tag in html.
      *
      * @return int Returns the size string of the image file.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetSizeString() {
@@ -209,7 +209,7 @@ class ImageFile {
      * Used to get mime type of the image file.
      *
      * @return int Returns the mime type of the image file.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetMime() {
@@ -222,7 +222,7 @@ class ImageFile {
      * Used to get image type constant of the image file, defined in the GD library.
      *
      * @return int Returns the image type constant of the image file, defined in the GD library.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetTypeConstant() {
@@ -235,7 +235,7 @@ class ImageFile {
      * Used to get if the image file is using RGB pallete.
      *
      * @return bool Returns true if the image is using RGB pallete.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function IsRGB() {
@@ -248,7 +248,7 @@ class ImageFile {
      * Used to get if the image file is using CMYK pallete.
      *
      * @return bool Returns true if the image is using CMYK pallete.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function IsCMYK() {
@@ -261,7 +261,7 @@ class ImageFile {
      * Used to get the number of bits the image file is using.
      *
      * @return mixed Returns number of bits the image file is using, in case the bit is not identified then false is returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetBits() {
@@ -279,7 +279,7 @@ class ImageFile {
      * @param type $y Provide the vertical value.
      * @param type $hard Provide true if the image needs to be cropped to resize and false if any side needs to be reduced.
      * @return mixed Returns true on success and false on failure in case outpath is provided else returns the false on failure and image resource on success.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Resize($outPath = '', $xOrSize = 0, $y = 0, $hard = false) {
@@ -391,7 +391,7 @@ class ImageFile {
      * Used to get the image GD function suffix.
      *
      * @return mixed Returns false if the function do not exists, else returns the function suffix.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetImageFuncSuffix() {
@@ -413,7 +413,7 @@ class ImageFile {
      * @param type $xOrSize Provide size from the config if empty default size will be taken from the config or provide the horizontal value.
      * @param type $y Provide the vertical value.
      * @param type $hard Provide true if the image needs to be cropped to resize and false if any side needs to be reduced.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Render($xOrSize = 0, $y = 0, $hard = false) {

@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -83,7 +83,7 @@ namespace FluitoPHP\Request;
  *      32. GetRequestHeader
  *      33. IsModuleFixed
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class Request {
@@ -92,7 +92,7 @@ class Request {
      * Used for storing Singleton instance.
      *
      * @var \FluitoPHP\Request\Request
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static private $instance = null;
@@ -101,7 +101,7 @@ class Request {
      * Used for storing module name.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $module = 'index';
@@ -110,7 +110,7 @@ class Request {
      * Used for storing controller name.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $controller = 'index';
@@ -119,7 +119,7 @@ class Request {
      * Used for storing action name.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $action = 'index';
@@ -128,7 +128,7 @@ class Request {
      * Used for storing error module.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $errorModule = null;
@@ -137,7 +137,7 @@ class Request {
      * Used for storing error handler.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $errorHandler = null;
@@ -146,7 +146,7 @@ class Request {
      * Used for storing URL sub path.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $subPath = '';
@@ -155,7 +155,7 @@ class Request {
      * Used for storing parsed URL.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $parsedURL = [];
@@ -164,7 +164,7 @@ class Request {
      * Used to store the SERVER variables.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $SERVER = null;
@@ -173,7 +173,7 @@ class Request {
      * Used to store the ENV variables.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $ENV = null;
@@ -182,7 +182,7 @@ class Request {
      * Used to store the GET variables.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $GET = null;
@@ -191,7 +191,7 @@ class Request {
      * Used to store the POST variables.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $POST = null;
@@ -200,7 +200,7 @@ class Request {
      * Used to store the COOKIE variables.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $COOKIE = null;
@@ -209,7 +209,7 @@ class Request {
      * Used to store the FILES variables.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $FILES = null;
@@ -218,7 +218,7 @@ class Request {
      * Used to store the default module from the configuration files.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $defaultModule;
@@ -227,7 +227,7 @@ class Request {
      * Used to store the default controller from the configuration files.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $defaultController;
@@ -236,7 +236,7 @@ class Request {
      * Used to store the default action from the configuration files.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $defaultAction;
@@ -245,7 +245,7 @@ class Request {
      * Used to store module from the URL.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $URLModule;
@@ -254,7 +254,7 @@ class Request {
      * Used to store controller from the URL.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $URLController = '';
@@ -263,7 +263,7 @@ class Request {
      * Used to store action from the URL.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $URLAction = '';
@@ -272,7 +272,7 @@ class Request {
      * Used to store if the module is taken from URL.
      *
      * @var bool
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $URLModuleTaken = false;
@@ -281,7 +281,7 @@ class Request {
      * Used to store true if the PreRun Step is executed.
      *
      * @var bool
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $preRan = false;
@@ -290,7 +290,7 @@ class Request {
      * Used to check if the module is fixed so that it cannot be updated.
      *
      * @var bool
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $moduleFixed = false;
@@ -299,7 +299,7 @@ class Request {
      * Used to store all modules.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $modules = null;
@@ -308,7 +308,7 @@ class Request {
      * Used for storing original parsed URL.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $originalParsedURL = [];
@@ -317,7 +317,7 @@ class Request {
      * Used for storing raw post data.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $rawPostData = null;
@@ -326,7 +326,7 @@ class Request {
      * Used for storing request headers.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $requestHeaders = null;
@@ -334,7 +334,7 @@ class Request {
     /**
      * Private constructor to use this class as a singleton class.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private function __construct() {
@@ -373,7 +373,7 @@ class Request {
      * Used to fetch the singleton instance object.
      *
      * @return \FluitoPHP\Request\Request
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static public function GetInstance() {
@@ -391,7 +391,7 @@ class Request {
      *
      * @throws \FluitoPHP\HttpException\HttpException Throws this exception if the path can not be found.
      * @throws \Exception Throws this exception if the controller class in not properly defined.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Setup() {
@@ -690,7 +690,7 @@ class Request {
      * Used to get the module name.
      *
      * @return string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetModule() {
@@ -703,7 +703,7 @@ class Request {
      * Used to get the controller name.
      *
      * @return string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetController() {
@@ -716,7 +716,7 @@ class Request {
      * Used to get the action name.
      *
      * @return string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetAction() {
@@ -729,7 +729,7 @@ class Request {
      * Used to get the error module name.
      *
      * @return string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetErrorModule() {
@@ -742,7 +742,7 @@ class Request {
      * Used to get the error handler name.
      *
      * @return string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetErrorHandler() {
@@ -755,7 +755,7 @@ class Request {
      * Used to get the subPath.
      *
      * @return string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetURLSubPath() {
@@ -768,7 +768,7 @@ class Request {
      * Used to get the parsedURL array.
      *
      * @return array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetURLVars() {
@@ -781,7 +781,7 @@ class Request {
      * Used to get the subpath of the application.
      *
      * @return string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetSubPath() {
@@ -793,7 +793,7 @@ class Request {
     /**
      * Used to run the request.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Run() {
@@ -819,7 +819,7 @@ class Request {
      * Used to handle the errors/exceptions.
      *
      * @param \Exception $exception This is the exception object which needs to be handled.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function HandleError($exception) {
@@ -979,7 +979,7 @@ class Request {
      *
      * @param string $key Provide the key value to be retrieved.
      * @return mixed Returns null if the value is not found else the value is returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Server($key) {
@@ -1014,7 +1014,7 @@ class Request {
      *
      * @param string $key Provide the key value to be retrieved.
      * @return mixed Returns null if the value is not found else the value is returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Env($key) {
@@ -1037,7 +1037,7 @@ class Request {
      *
      * @param string $key Provide the key value to be retrieved.
      * @return mixed Returns null if the value is not found else the value is returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Get($key) {
@@ -1060,7 +1060,7 @@ class Request {
      *
      * @param string $key Provide the key value to be retrieved.
      * @return mixed Returns null if the value is not found else the value is returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Post($key) {
@@ -1083,7 +1083,7 @@ class Request {
      *
      * @param string $key Provide the key value to be retrieved.
      * @return mixed Returns null if the value is not found else the value is returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Cookie($key) {
@@ -1106,7 +1106,7 @@ class Request {
      *
      * @param string $key Provide the key value to be retrieved.
      * @return mixed Returns null if the value is not found else the value is returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Files($key) {
@@ -1128,7 +1128,7 @@ class Request {
      * Used to check if the current request is of POST type.
      *
      * @return bool Returns true if the current request is of POST type.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function IsPost() {
@@ -1147,7 +1147,7 @@ class Request {
      * @param array $query Provide query in associative array.
      * @param string $customPrefix Provide custom prefix to use instead of the current host.
      * @return string Returns the generated URL.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function URL($pathOrController = '', $action = '', $module = '', $addArgs = [], $query = [], $customPrefix = null) {
@@ -1249,7 +1249,7 @@ class Request {
     /**
      * Used to Run before the MVC but after the Bootloaders.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function PreRun() {
@@ -1349,7 +1349,7 @@ class Request {
      *
      * @param string $module Provide the module name.
      * @return bool Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetModule($module) {
@@ -1399,7 +1399,7 @@ class Request {
      *
      * @param string $controller Provide the controller name.
      * @return bool Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetController($controller) {
@@ -1452,7 +1452,7 @@ class Request {
      *
      * @param string $action Provide the action name.
      * @return bool Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetAction($action) {
@@ -1508,7 +1508,7 @@ class Request {
     /**
      * Used to fix the module so that it can not be updated by code.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function FixModule() {
@@ -1521,7 +1521,7 @@ class Request {
      * Used to get all the module names.
      *
      * @return array Returns all the module names.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetModules() {
@@ -1535,7 +1535,7 @@ class Request {
      *
      * @param string $module Provide the module name.
      * @return bool Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function ShiftModule($module) {
@@ -1613,7 +1613,7 @@ class Request {
      *
      * @param string $controller Provide the controller name.
      * @return bool Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function ShiftController($controller) {
@@ -1669,7 +1669,7 @@ class Request {
     /**
      * Used to update the mapping of controller and views.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private function RefreshMaps() {
@@ -1739,7 +1739,7 @@ class Request {
      * Used to get the post request raw data.
      *
      * @return string Returns the post request raw data.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetRawPostData() {
@@ -1760,7 +1760,7 @@ class Request {
      *
      * @param string $key Provide the key to get the single request header.
      * @return mixed Returns the request header if the key is passed else all the headers will be returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetRequestHeader($key = null) {
@@ -1811,7 +1811,7 @@ class Request {
      * Used to check if the module is fixed or not.
      *
      * @return bool Returns true if the module is fixed and false if the module has not been fixed.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function IsModuleFixed() {

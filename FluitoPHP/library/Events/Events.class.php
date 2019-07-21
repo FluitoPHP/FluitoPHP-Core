@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -34,7 +34,7 @@ namespace FluitoPHP\Events;
  *      4. Remove
  *      5. Run
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class Events {
@@ -43,7 +43,7 @@ class Events {
      * Used for storing Singleton instance.
      *
      * @var \FluitoPHP\Events\Events
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static private $instance = null;
@@ -52,7 +52,7 @@ class Events {
      * Used to store the events and run them suitably.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $eventsMap = [];
@@ -61,7 +61,7 @@ class Events {
      * Used to store the arguments of events.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $argsMap = [];
@@ -70,7 +70,7 @@ class Events {
      * Used to store the priorities of events.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $priorityMap = [];
@@ -78,7 +78,7 @@ class Events {
     /**
      * Used to make this class as a singleton class.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private function __construct() {
@@ -89,7 +89,7 @@ class Events {
      * Used to fetch the Instance object globally.
      *
      * @return \FluitoPHP\Events\Events Returns this instance object.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static public function GetInstance() {
@@ -110,7 +110,7 @@ class Events {
      * @param int $arguments Number of arguments provided irrespective of the number of arguments in the call, default is 0.
      * @param int $priority Priority of the function, default is 10.
      * @return bool Returns true if successfully registers the function.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Add($actionId, $function, $arguments = 0, $priority = 10) {
@@ -164,7 +164,7 @@ class Events {
      * @param string $actionId Action ID from which the function is required to be removed.
      * @param callable $function Function definition which is required to be removed from the action.
      * @return bool Returns true when successfully removed the function.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Remove($actionId, $function) {
@@ -202,7 +202,7 @@ class Events {
      * @param string $name Provide the name of the action that needs to be run.
      * @param mixed $parameters Provide the additional parameters.
      * @return void This function do not return any value, instead return is called when there is nothing to do.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Run() {

@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -28,7 +28,7 @@ namespace FluitoPHP\ErrorHandler;
  *      2. httpHandle
  *      3. http404Handle
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class DefaultErrorHandler extends \FluitoPHP\ErrorHandler\ErrorHandler {
@@ -37,7 +37,7 @@ class DefaultErrorHandler extends \FluitoPHP\ErrorHandler\ErrorHandler {
      * Used to handle all errors.
      *
      * @param \Exception $e Provide the exception that needs to be handled.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function indexHandle($e) {
@@ -60,7 +60,7 @@ class DefaultErrorHandler extends \FluitoPHP\ErrorHandler\ErrorHandler {
      * Used to handle HTTP errors.
      *
      * @param \Exception $e Provide the exception that needs to be handled.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function httpHandle($e) {
@@ -84,7 +84,7 @@ class DefaultErrorHandler extends \FluitoPHP\ErrorHandler\ErrorHandler {
      * Used to handle HTTP 404 errors.
      *
      * @param \Exception $e Provide the exception that needs to be handled.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function http404Handle($e) {

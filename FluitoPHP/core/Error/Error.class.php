@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -33,7 +33,7 @@ namespace FluitoPHP\Error;
  *      6. GetMessages
  *      7. GetNames
  * 
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class Error {
@@ -42,7 +42,7 @@ class Error {
      * Used for storing error names/messages.
      * 
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $errors = [];
@@ -52,7 +52,7 @@ class Error {
      * 
      * @param mixed $message Provide message in string or array of strings format.
      * @param mixed $key Provide error key in string or array of strings format.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     function __construct($message = null, $key = null) {
@@ -65,7 +65,7 @@ class Error {
      * Used to get string representation.
      * 
      * @return string Returns the string representation.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     function __toString() {
@@ -117,7 +117,7 @@ class Error {
      * @param mixed $message Provide message in string or array of strings format.
      * @param mixed $key Provide error key in string or array of strings format.
      * @return \FluitoPHP\Error\Error Returns self reference for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function AddError($message = null, $key = null) {
@@ -173,7 +173,7 @@ class Error {
      * 
      * @param mixed $object Provide the return value to check if the object is error object or not.
      * @return bool Returns true if the object is an error, and false instead.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static public function IsError($object) {
@@ -191,7 +191,7 @@ class Error {
      * 
      * @param mixed $keys Provide keys in array of string or a single key in string format.
      * @return array Returns the associative array containing errors.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetErrors($keys = []) {
@@ -224,7 +224,7 @@ class Error {
      * 
      * @param mixed $keys Provide keys in array of string or a single key in string format.
      * @return array Returns the array containing error messages.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetMessages($keys = []) {
@@ -256,7 +256,7 @@ class Error {
      * Used to get error keys in an array.
      * 
      * @return array Returns the array containing error keys.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetKeys() {

@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -37,7 +37,7 @@ namespace FluitoPHP\Model;
  *      9. Update
  *      10. Delete
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class Model extends \FluitoPHP\Base\Base {
@@ -46,7 +46,7 @@ class Model extends \FluitoPHP\Base\Base {
      * Used to store the model/table name.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $model = "";
@@ -55,7 +55,7 @@ class Model extends \FluitoPHP\Base\Base {
      * Used to store the connection identifier of the database.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $connectionid = null;
@@ -65,7 +65,7 @@ class Model extends \FluitoPHP\Base\Base {
      *
      * @param string $model Provide the model name.
      * @param string $connectionid Provide the connection id to use.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     function __construct($model, $connectionid = null) {
@@ -80,7 +80,7 @@ class Model extends \FluitoPHP\Base\Base {
      * Used to get the name of the model.
      *
      * @return string Returns the name.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function GetName() {
@@ -93,7 +93,7 @@ class Model extends \FluitoPHP\Base\Base {
      * Used to get the connection id of the model.
      *
      * @return string Returns the connection id.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function GetConnectionID() {
@@ -106,7 +106,7 @@ class Model extends \FluitoPHP\Base\Base {
      * Used to get the database connection of the model.
      *
      * @return \FluitoPHP\Database\DBConnectionHelper The helper class is returned having this \FluitoPHP\Database\DBConnectionHelper interface implemented.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function GetConnection() {
@@ -121,7 +121,7 @@ class Model extends \FluitoPHP\Base\Base {
      * Used to get the number of affected rows by the last ran query.
      *
      * @return int Returns the number of affected rows by last ran query.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function AffectedRows() {
@@ -137,7 +137,7 @@ class Model extends \FluitoPHP\Base\Base {
      * Used to get all data from the table.
      *
      * @return array Returns the data from the table.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SelectAll() {
@@ -156,7 +156,7 @@ class Model extends \FluitoPHP\Base\Base {
      * Used to get selected data from the table.
      *
      * @return array Returns the selected data from the table.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Select($columns = [], $where = [], $group = [], $having = [], $order = [], $distinct = false, $perpage = 0, $page = 1, $addArgs = []) {
@@ -177,7 +177,7 @@ class Model extends \FluitoPHP\Base\Base {
      * @param mixed $values Provide the values in an associative array. Format array or \FluitoPHP\Database\DBQueryHelper.
      * @param array $addArgs Provide additional database specific arguments.
      * @return mixed Returns the insert id of auto increment column else true and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Insert($values, $addArgs = []) {
@@ -199,7 +199,7 @@ class Model extends \FluitoPHP\Base\Base {
      * @param array $where Provide the where clause.
      * @param array $addArgs Provide additional database specific arguments.
      * @return mixed Returns the insert id of auto increment column else true and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Update($values, $where = [], $addArgs = []) {
@@ -220,7 +220,7 @@ class Model extends \FluitoPHP\Base\Base {
      * @param array $where Provide the where clause.
      * @param array $addArgs Provide additional database specific arguments.
      * @return bool Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Delete($where = [], $addArgs = []) {

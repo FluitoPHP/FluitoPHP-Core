@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -80,7 +80,7 @@ namespace FluitoPHP\Database;
  *      35. RetDelete
  *      36. ResolveMeta
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 abstract class DBQueryHelper {
@@ -89,7 +89,7 @@ abstract class DBQueryHelper {
      * Used to store the type of query to be generated.
      *
      * @var \FluitoPHP\Database\DBConnectionHelper
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $connection = null;
@@ -98,7 +98,7 @@ abstract class DBQueryHelper {
      * Used to store the type of query to be generated.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $type = null;
@@ -107,7 +107,7 @@ abstract class DBQueryHelper {
      * Used to store the custom type of query to be generated.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $customType = null;
@@ -116,7 +116,7 @@ abstract class DBQueryHelper {
      * Used to store the generated query.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $query = '';
@@ -125,7 +125,7 @@ abstract class DBQueryHelper {
      * Used to store required tables and their joining criteria.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $tables = [];
@@ -134,7 +134,7 @@ abstract class DBQueryHelper {
      * Used to store distinct criteria.
      *
      * @var bool
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $distinct = false;
@@ -143,7 +143,7 @@ abstract class DBQueryHelper {
      * Used to store the columns to be fetched.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $columns = [];
@@ -152,7 +152,7 @@ abstract class DBQueryHelper {
      * Used to store the where clauses.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $where = [];
@@ -161,7 +161,7 @@ abstract class DBQueryHelper {
      * Used to store the group by columns.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $group = [];
@@ -170,7 +170,7 @@ abstract class DBQueryHelper {
      * Used to store the having clauses.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $having = [];
@@ -179,7 +179,7 @@ abstract class DBQueryHelper {
      * Used to store the order columns.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $order = [];
@@ -188,7 +188,7 @@ abstract class DBQueryHelper {
      * Used to store the per page count.
      *
      * @var int
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $perpage = -1;
@@ -197,7 +197,7 @@ abstract class DBQueryHelper {
      * Used to store the page number.
      *
      * @var int
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $page = 1;
@@ -206,7 +206,7 @@ abstract class DBQueryHelper {
      * Used to store the rows of values to be inserted in the table. Format array or \FluitoPHP\Database\DBQueryHelper.
      *
      * @var mixed
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $values = [];
@@ -215,7 +215,7 @@ abstract class DBQueryHelper {
      * Used to store the indexes/keys/foreign keys that needs to be created.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $indexes = [];
@@ -224,7 +224,7 @@ abstract class DBQueryHelper {
      * Used to store the select clause of the create view statement.
      *
      * @var \FluitoPHP\Database\DBQueryHelper
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $viewSelect = null;
@@ -233,7 +233,7 @@ abstract class DBQueryHelper {
      * Used to store if the new table needs to be created is a normal table or temporary table.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $temporary = 'N';
@@ -242,7 +242,7 @@ abstract class DBQueryHelper {
      * Used to store if the new table needs to create autoincrement column separately.
      *
      * @var bool
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $reqAutoIncrement = false;
@@ -251,7 +251,7 @@ abstract class DBQueryHelper {
      * Used to store additional database specific arguments.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $addArgs = [];
@@ -260,7 +260,7 @@ abstract class DBQueryHelper {
      * Used to initiate query.
      *
      * @param \FluitoPHP\Database\DBConnectionHelper $connection Provide the connection object.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function __construct($connection) {
@@ -275,7 +275,7 @@ abstract class DBQueryHelper {
      * @param bool $autoIncrement Provide if the query requires autoincrement query
      * @param string $column Provide the columns for which auto increment needs to be created.
      * @return string Returns the generated query. In case of error returns empty query.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function Generate($autoIncrement = false, $column = '') {
@@ -490,7 +490,7 @@ abstract class DBQueryHelper {
      * @param int $page Provide the page number.
      * @param array $addArgs Provide additional database specific arguments.
      * @return \FluitoPHP\Database\DBQueryHelper Self reference is returned for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function Select($tables, $columns = [], $where = [], $group = [], $having = [], $order = [], $distinct = false, $perpage = 0, $page = 1, $addArgs = []) {
@@ -557,7 +557,7 @@ abstract class DBQueryHelper {
      * @param string $table Provide the table name needs to be checked.
      * @param array $addArgs Provide additional database specific arguments.
      * @return \FluitoPHP\Database\DBQueryHelper Self reference is returned for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function CheckTable($table, $addArgs = []) {
@@ -629,7 +629,7 @@ abstract class DBQueryHelper {
      * @param string $temporary Provide this variable as N for normal table, T for (local) temporary table and G for global temporary table.
      * @param array $addArgs Provide additional database specific arguments.
      * @return \FluitoPHP\Database\DBQueryHelper Self reference is returned for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function CreateTable($table, $columns, $indexes = [], $temporary = 'N', $addArgs = []) {
@@ -721,7 +721,7 @@ abstract class DBQueryHelper {
      * @param array $indexes Provide indexes that needs to be created including foreign keys.
      * @param array $addArgs Provide additional database specific arguments.
      * @return \FluitoPHP\Database\DBQueryHelper Self reference is returned for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function AlterTable($table, $columns, $indexes = [], $addArgs = []) {
@@ -755,7 +755,7 @@ abstract class DBQueryHelper {
      * @param string $table Provide the table that needs to be truncated.
      * @param array $addArgs Provide additional database specific arguments.
      * @return \FluitoPHP\Database\DBQueryHelper Self reference is returned for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function TruncateTable($table, $addArgs = []) {
@@ -783,7 +783,7 @@ abstract class DBQueryHelper {
      * @param string $table Provide the table that needs to be dropped.
      * @param array $addArgs Provide additional database specific arguments.
      * @return \FluitoPHP\Database\DBQueryHelper Self reference is returned for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function DropTable($table, $addArgs = []) {
@@ -813,7 +813,7 @@ abstract class DBQueryHelper {
      * @param string $viewSelect Provide the select query helper for this create view clause.
      * @param array $addArgs Provide additional database specific arguments.
      * @return \FluitoPHP\Database\DBQueryHelper Self reference is returned for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function CreateView($table, $columns = [], $viewSelect = null, $addArgs = []) {
@@ -847,7 +847,7 @@ abstract class DBQueryHelper {
      * @param string $table Provide the view that needs to be dropped.
      * @param array $addArgs Provide additional database specific arguments.
      * @return \FluitoPHP\Database\DBQueryHelper Self reference is returned for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function DropView($table, $addArgs = []) {
@@ -880,7 +880,7 @@ abstract class DBQueryHelper {
      * @param mixed $values Provide the values in an associative array. Format array or \FluitoPHP\Database\DBQueryHelper.
      * @param array $addArgs Provide additional database specific arguments.
      * @return \FluitoPHP\Database\DBQueryHelper Self reference is returned for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function Insert($table, $values, $addArgs = []) {
@@ -913,7 +913,7 @@ abstract class DBQueryHelper {
      * @param array $where Provide the where clause.
      * @param array $addArgs Provide additional database specific arguments.
      * @return \FluitoPHP\Database\DBQueryHelper Self reference is returned for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function Update($table, $values, $where = [], $addArgs = []) {
@@ -948,7 +948,7 @@ abstract class DBQueryHelper {
      * @param array $where Provide the where clause.
      * @param array $addArgs Provide additional database specific arguments.
      * @return \FluitoPHP\Database\DBQueryHelper Self reference is returned for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function Delete($table, $where = [], $addArgs = []) {
@@ -978,7 +978,7 @@ abstract class DBQueryHelper {
      *
      * @param string $type Provide the type of custom query to be generated.
      * @return \FluitoPHP\Database\DBQueryHelper Self reference is returned for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function Custom($type) {
@@ -1004,7 +1004,7 @@ abstract class DBQueryHelper {
      * Used to query on database.
      *
      * @return bool Returns true or insert id if the query runs successfully.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function Query() {
@@ -1033,7 +1033,7 @@ abstract class DBQueryHelper {
      *
      * @param bool $objectType Provide true if you require row in object format, false will return result rows in associative array.
      * @return array Returns resultant rows in array of associative array or object, depending on the 2nd parameter.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function GetResults($objectType = false) {
@@ -1049,7 +1049,7 @@ abstract class DBQueryHelper {
      *
      * @param bool $objectType Provide true if you require row in object format, false will return result rows in associative array.
      * @return mixed Returns resultant row in associative array or object, depending on the 2nd parameter.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function GetRow($objectType = false) {
@@ -1065,7 +1065,7 @@ abstract class DBQueryHelper {
      *
      * @param bool $objectType Provide true if you require row in object format, false will return result rows in associative array.
      * @return array Returns resultant column in array.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function GetColumn($objectType = false) {
@@ -1080,7 +1080,7 @@ abstract class DBQueryHelper {
      * Used to fetch the variable which is retrieved by the provided query from this connection.
      *
      * @return string The first variable of first row will be fetched and returned in string format.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function GetVar() {
@@ -1095,7 +1095,7 @@ abstract class DBQueryHelper {
      * Used to fetch the columns info from last ran query from this connection.
      *
      * @return array Returns the columns info.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetColInfo() {
@@ -1109,7 +1109,7 @@ abstract class DBQueryHelper {
      * Used to get if the helper contains select query.
      *
      * @return bool
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function IsSelect() {
@@ -1124,7 +1124,7 @@ abstract class DBQueryHelper {
      * @param string $metaFunction Provide meta function to resolve.
      * @param array $args Provide array of arguments for function.
      * @return string Returns the resolved meta SQL to use in database.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     abstract public function Meta($metaFunction, $args);
@@ -1135,7 +1135,7 @@ abstract class DBQueryHelper {
      * @param string $type Provide the type of query to be implemented.
      * @return string Returns the generated custom query.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     abstract protected function GenCustom($type);
@@ -1145,7 +1145,7 @@ abstract class DBQueryHelper {
      *
      * @return string Returns the generated select query.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     abstract protected function RetSelect();
@@ -1155,7 +1155,7 @@ abstract class DBQueryHelper {
      *
      * @return string Returns the generated query to check if the table is present in the database.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     abstract protected function RetCheckTable();
@@ -1165,7 +1165,7 @@ abstract class DBQueryHelper {
      *
      * @return string Returns the generated query to create the table.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     abstract protected function RetCreateTable();
@@ -1176,7 +1176,7 @@ abstract class DBQueryHelper {
      * @param string $column Provide the column name for which the autoincrement query needs to be generated.
      * @return string Returns the generated query to create the table.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function RetAutoIncrement($column) {
@@ -1195,7 +1195,7 @@ abstract class DBQueryHelper {
      *
      * @return string Returns the generated query to alter the table.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     abstract protected function RetAlterTable();
@@ -1205,7 +1205,7 @@ abstract class DBQueryHelper {
      *
      * @return string Returns the generated query to truncate table.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     abstract protected function RetTruncateTable();
@@ -1215,7 +1215,7 @@ abstract class DBQueryHelper {
      *
      * @return string Returns the generated query to drop a table.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     abstract protected function RetDropTable();
@@ -1225,7 +1225,7 @@ abstract class DBQueryHelper {
      *
      * @return string Returns the generated query to create/replace view.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     abstract protected function RetCreateView();
@@ -1235,7 +1235,7 @@ abstract class DBQueryHelper {
      *
      * @return string Returns the generated query to drop a view.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     abstract protected function RetDropView();
@@ -1245,7 +1245,7 @@ abstract class DBQueryHelper {
      *
      * @return string Returns the generated query to insert rows in a table.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     abstract protected function RetInsert();
@@ -1255,7 +1255,7 @@ abstract class DBQueryHelper {
      *
      * @return string Returns the generated query to update rows in a table.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     abstract protected function RetUpdate();
@@ -1265,7 +1265,7 @@ abstract class DBQueryHelper {
      *
      * @return string Returns the generated query to delete rows from a table.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     abstract protected function RetDelete();
@@ -1275,7 +1275,7 @@ abstract class DBQueryHelper {
      *
      * @param string $query Provide SQL query with meta SQL.
      * @return string Returns the resolved meat SQL to use in database.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function ResolveMeta($query) {

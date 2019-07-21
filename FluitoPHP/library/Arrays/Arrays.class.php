@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -28,7 +28,7 @@ namespace FluitoPHP\Arrays;
  *      2. DotsToMulti
  *      3. MultiToDots
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class Arrays {
@@ -36,7 +36,7 @@ class Arrays {
     /**
      * Used to initialize the class.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     function __construct() {
@@ -48,7 +48,7 @@ class Arrays {
      *
      * @param array $arr Provide the array that needs to be converted to multi dimensional.
      * @return array Returns the updated array.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static public function DotsToMulti($arr) {
@@ -146,7 +146,7 @@ class Arrays {
      *
      * @param array $arr Provide the array that needs to be converted to dots keys.
      * @return array Returns the updated array.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static public function MultiToDots($arr) {

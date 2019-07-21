@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -73,7 +73,7 @@ namespace FluitoPHP\Mail;
  *      26. GenerateCalenderBlock
  *      27. GenerateBody
  * 
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class Mail {
@@ -82,7 +82,7 @@ class Mail {
      * Used to store the recipients of the email.
      * 
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $mailTo = [];
@@ -91,7 +91,7 @@ class Mail {
      * Used to store the CC recipients of the email.
      * 
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $mailCc = [];
@@ -100,7 +100,7 @@ class Mail {
      * Used to store the BCC recipients of the email.
      * 
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $mailBcc = [];
@@ -109,7 +109,7 @@ class Mail {
      * Used to store the sender of the email.
      * 
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $mailFrom = "";
@@ -118,7 +118,7 @@ class Mail {
      * Used to store the reply to email address.
      * 
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $replyTo = "";
@@ -127,7 +127,7 @@ class Mail {
      * Used to store the subject of the email.
      * 
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $mailSubject = "";
@@ -136,7 +136,7 @@ class Mail {
      * Used to store the message of the email.
      * 
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $mailMessagePlain = "";
@@ -145,7 +145,7 @@ class Mail {
      * Used to store the message of the email.
      * 
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $mailMessageHTML = "";
@@ -154,7 +154,7 @@ class Mail {
      * Used to store the message of the email.
      * 
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $mailMessageCalender = "";
@@ -163,7 +163,7 @@ class Mail {
      * Used to store the email headers.
      * 
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $mailHeaders = [];
@@ -172,7 +172,7 @@ class Mail {
      * Used to store the files that needs to be attached to the email.
      * 
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $mailAttachments = [];
@@ -181,7 +181,7 @@ class Mail {
      * Used to store the images that needs to be attached to the email.
      * 
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $mailImages = [];
@@ -190,7 +190,7 @@ class Mail {
      * Used to store the parameters if required for sendmail executable.
      * 
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $mailParameters = "";
@@ -199,7 +199,7 @@ class Mail {
      * Used to store the basic options.
      * 
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $config = array(
@@ -217,7 +217,7 @@ class Mail {
      * Used to get updated mail configuration of the class.
      * 
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static protected $mailConfig = array(
@@ -246,7 +246,7 @@ class Mail {
      * Used to get application configuration of the class.
      * 
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static protected $appConfig = null;
@@ -255,7 +255,7 @@ class Mail {
      * Used to store the mixed boundary.
      * 
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $boundaryMixed = null;
@@ -264,7 +264,7 @@ class Mail {
      * Used to store the alternative boundary.
      * 
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $boundaryAlternative = null;
@@ -273,7 +273,7 @@ class Mail {
      * Used to store the related boundary.
      * 
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected $boundaryRelated = null;
@@ -282,7 +282,7 @@ class Mail {
      * Used to store valid encodings.
      * 
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static protected $validEncodings = array(
@@ -295,7 +295,7 @@ class Mail {
      * Used to store default encoding, used if invalid encoding is provided.
      * 
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static protected $defaultEncoding = 'base64';
@@ -304,7 +304,7 @@ class Mail {
      * Used to initialize the class.
      * 
      * @param array $config Provide the options for the email.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     function __construct($config = []) {
@@ -388,7 +388,7 @@ class Mail {
      * 
      * @param mixed $emails Provide the email list in array or a string with comma (,) or colon (;) separated.
      * @return array Returns the array with valid entries only.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private function ValidateEmails($emails) {
@@ -427,7 +427,7 @@ class Mail {
      * 
      * @param string $email Provide the email for validation.
      * @return bool Retyrns true if the email is valid else false.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function ValidateEmail($email) {
@@ -480,7 +480,7 @@ class Mail {
      * 
      * @param array $mailTo Provide the receivers list in array or a string with comma (,) or colon (;) separated.
      * @return \FluitoPHP\Mail\Mail Self reference is returned for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function AddTo($mailTo) {
@@ -502,7 +502,7 @@ class Mail {
      * 
      * @param array $mailCc Provide the CC receivers list in array or a string with comma (,) or colon (;) separated.
      * @return \FluitoPHP\Mail\Mail Self reference is returned for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function AddCc($mailCc) {
@@ -524,7 +524,7 @@ class Mail {
      * 
      * @param array $mailBcc Provide the BCC receivers list in array or a string with comma (,) or colon (;) separated.
      * @return \FluitoPHP\Mail\Mail Self reference is returned for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function AddBcc($mailBcc) {
@@ -546,7 +546,7 @@ class Mail {
      * 
      * @param string $mailFrom Provide the sender email and/or name.
      * @return mixed Self reference is returned for chained calls if $mailFrom is a string else from email of the mail will be returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function From($mailFrom = null) {
@@ -574,7 +574,7 @@ class Mail {
      * 
      * @param string $replyTo Provide the reply to email.
      * @return mixed Self reference is returned for chained calls if $replyTo is a string else reply to email of the mail will be returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function ReplyTo($replyTo = null) {
@@ -602,7 +602,7 @@ class Mail {
      * 
      * @param string $mailSubject Provide the email subject.
      * @return mixed Self reference is returned for chained calls if $mailSubject is a string else subject of the mail will be returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Subject($mailSubject = null) {
@@ -624,7 +624,7 @@ class Mail {
      * 
      * @param string $mailMessagePlain Provide the email message.
      * @return mixed Self reference is returned for chained calls if $mailMessagePlain is a string else message of the mail will be returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function PlainMessage($mailMessagePlain = null) {
@@ -646,7 +646,7 @@ class Mail {
      * 
      * @param string $mailMessageHTML Provide the email message.
      * @return mixed Self reference is returned for chained calls if $mailMessageHTML is a string else message of the mail will be returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function HTMLMessage($mailMessageHTML = null) {
@@ -668,7 +668,7 @@ class Mail {
      * 
      * @param string $mailMessageCalender Provide the email message.
      * @return mixed Self reference is returned for chained calls if $mailMessageCalender is a string else message of the mail will be returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function CalenderMessage($mailMessageCalender = null) {
@@ -690,7 +690,7 @@ class Mail {
      * 
      * @param array $mailHeaders Provide the headers that needs to be added to the mail in string format containing one header or in array.
      * @return mixed Self reference is returned for chained calls if $mailHeaders is string or array of headers else message of the mail will be returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Header($mailHeaders = null) {
@@ -763,7 +763,7 @@ class Mail {
      * @param string $name Provide the name of the attachment.
      * @param array $parms Provide additional parameters for the attachment.
      * @return bool Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Attachment($mailAttachment, $name = '', $parms = []) {
@@ -835,7 +835,7 @@ class Mail {
      * @param string $name Provide the name of the image.
      * @param array $parms Provide additional parameters for the image.
      * @return mixed Content ID of the image is returned or false in case of failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Image($mailImage, $name = '', $parms = []) {
@@ -894,7 +894,7 @@ class Mail {
      * 
      * @param string $mailParameters Provide additional parameters.
      * @return \FluitoPHP\Mail\Mail Self reference is returned for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Parameters($mailParameters = null) {
@@ -915,7 +915,7 @@ class Mail {
      * Used to send the email.
      * 
      * @return bool Returns if the mail is successfully sent to the mail server for sending.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Send() {
@@ -933,7 +933,7 @@ class Mail {
      * Used to generate the comma separated recipients emails.
      * 
      * @return string Returns the comma separated recipients emails.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GenerateTo() {
@@ -952,7 +952,7 @@ class Mail {
      * Used to generate the headers in string format.
      * 
      * @return string Returns the headers in string format.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GenerateHeaders() {
@@ -1155,7 +1155,7 @@ class Mail {
      * @param string $encoding Provide the encoding for the chunk.
      * @param string $type Provide the name type for the chunk. (name, filename)
      * @return string Returns the chunked text.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function GenerateNameChunk($pathOrName, $encoding = 'US-ASCII', $type = 'name') {
@@ -1211,7 +1211,7 @@ class Mail {
      * @param string $text Provide the text string to be chunked.
      * @param string $encoding Provide the encoding to be used for the text.
      * @return string Returns the generated chunked text string.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function GenerateTextChunk($text, $encoding) {
@@ -1274,7 +1274,7 @@ class Mail {
      * Used to generate image block for mail.
      * 
      * @return string Returns the generated image block for mail.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function GenerateImageBlock() {
@@ -1337,7 +1337,7 @@ class Mail {
      * Used to generate attachment block for mail.
      * 
      * @return string Returns the generated attachment block for mail.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function GenerateAttachmentBlock() {
@@ -1398,7 +1398,7 @@ class Mail {
      * Used to generate the plain text block of the mail.
      * 
      * @return string Returns the generated plain text block of the mail.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function GeneratePlainBlock() {
@@ -1427,7 +1427,7 @@ class Mail {
      * Used to generate the html text block of the mail.
      * 
      * @return string Returns the generated html text block of the mail.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function GenerateHTMLBlock() {
@@ -1456,7 +1456,7 @@ class Mail {
      * Used to generate the calender text block of the mail.
      * 
      * @return string Returns the generated calender text block of the mail.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function GenerateCalenderBlock() {
@@ -1486,7 +1486,7 @@ class Mail {
      * Used to generate the message body.
      * 
      * @return string Returns the generated message body.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GenerateBody() {

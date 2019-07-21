@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -40,7 +40,7 @@ namespace FluitoPHP\Database\Mysql;
  *      14. RetDelete
  *      15. Meta
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class MysqlQueryHelper extends \FluitoPHP\Database\DBQueryHelper {
@@ -49,7 +49,7 @@ class MysqlQueryHelper extends \FluitoPHP\Database\DBQueryHelper {
      * Used to initiate query.
      *
      * @param \FluitoPHP\Database\Mysql\MysqlConnectionHelper $connection Provide the connection object.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function __construct($connection) {
@@ -63,7 +63,7 @@ class MysqlQueryHelper extends \FluitoPHP\Database\DBQueryHelper {
      * @param array $conditions Provide the conditions to be implemented.
      * @param int $type Provide the type of condition to be implemented. 0 = WHERE, 1 = ON and 2 = HAVING
      * @return string Returns the generated where/on/having clause.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function WhereClause($conditions = array(), $type = 0) {
@@ -221,7 +221,7 @@ class MysqlQueryHelper extends \FluitoPHP\Database\DBQueryHelper {
      * @param string $type Provide the type of query to be implemented.
      * @return string Returns the generated custom query.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function GenCustom($type) {
@@ -234,7 +234,7 @@ class MysqlQueryHelper extends \FluitoPHP\Database\DBQueryHelper {
      *
      * @return string Returns the generated select query.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function RetSelect() {
@@ -531,7 +531,7 @@ class MysqlQueryHelper extends \FluitoPHP\Database\DBQueryHelper {
      *
      * @return string Returns the generated query to check if the table is present in the database.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function RetCheckTable() {
@@ -551,7 +551,7 @@ class MysqlQueryHelper extends \FluitoPHP\Database\DBQueryHelper {
      *
      * @return string Returns the generated query to create the table.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function RetCreateTable() {
@@ -771,7 +771,7 @@ class MysqlQueryHelper extends \FluitoPHP\Database\DBQueryHelper {
      *
      * @return string Returns the generated query to alter the table.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function RetAlterTable() {
@@ -1194,7 +1194,7 @@ class MysqlQueryHelper extends \FluitoPHP\Database\DBQueryHelper {
      *
      * @return string Returns the generated query to truncate table.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function RetTruncateTable() {
@@ -1214,7 +1214,7 @@ class MysqlQueryHelper extends \FluitoPHP\Database\DBQueryHelper {
      *
      * @return string Returns the generated query to drop a table.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function RetDropTable() {
@@ -1242,7 +1242,7 @@ class MysqlQueryHelper extends \FluitoPHP\Database\DBQueryHelper {
      *
      * @return string Returns the generated query to create/replace view.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function RetCreateView() {
@@ -1284,7 +1284,7 @@ class MysqlQueryHelper extends \FluitoPHP\Database\DBQueryHelper {
      *
      * @return string Returns the generated query to drop a view.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function RetDropView() {
@@ -1308,7 +1308,7 @@ class MysqlQueryHelper extends \FluitoPHP\Database\DBQueryHelper {
      *
      * @return string Returns the generated query to insert rows in a table.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function RetInsert() {
@@ -1443,7 +1443,7 @@ class MysqlQueryHelper extends \FluitoPHP\Database\DBQueryHelper {
      *
      * @return string Returns the generated query to update rows in a table.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function RetUpdate() {
@@ -1501,7 +1501,7 @@ class MysqlQueryHelper extends \FluitoPHP\Database\DBQueryHelper {
      *
      * @return string Returns the generated query to delete rows from a table.
      * @throws \Exception Exception is thrown if the structure of arguments is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function RetDelete() {
@@ -1532,7 +1532,7 @@ class MysqlQueryHelper extends \FluitoPHP\Database\DBQueryHelper {
      * @param string $metaFunction Provide meta function to resolve.
      * @param array $args Provide array of arguments for function.
      * @return string Returns the resolved meta SQL to use in database.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Meta($metaFunction, $args) {

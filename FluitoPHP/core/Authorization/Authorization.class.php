@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -35,7 +35,7 @@ namespace FluitoPHP\Authorization;
  *      5. GetUser
  *      6. GetRole
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class Authorization {
@@ -44,7 +44,7 @@ class Authorization {
      * Used for storing Singleton instance.
      *
      * @var \FluitoPHP\Authorization\Authorization
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static private $instance = null;
@@ -53,7 +53,7 @@ class Authorization {
      * Used to store the configuration.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $config = array();
@@ -62,7 +62,7 @@ class Authorization {
      * Used for storing authentication object.
      *
      * @var \FluitoPHP\Authentication\Authentication
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $authentication = null;
@@ -71,7 +71,7 @@ class Authorization {
      * Used to store the database instance.
      *
      * @var \FluitoPHP\Database\Database
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $database = null;
@@ -79,7 +79,7 @@ class Authorization {
     /**
      * Used to make this class as a singleton class.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private function __construct() {
@@ -113,7 +113,7 @@ class Authorization {
      * Used to fetch the Instance object globally.
      *
      * @return \FluitoPHP\Authorization\Authorization Returns this instance object.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static public function GetInstance() {
@@ -130,7 +130,7 @@ class Authorization {
      * Used to update the configuration of the authorization.
      *
      * @param array $config Provide the configuration options.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function UpdateConfig($config = []) {
@@ -149,7 +149,7 @@ class Authorization {
     /**
      * Used to create the base tables for authentication.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Upgrade() {
@@ -353,7 +353,7 @@ class Authorization {
      *
      * @param string $user_login Provide user login/id to get the role details. Non string will lead to logged in user.
      * @return \FluitoPHP\Authorization\UserRoles Returns the user roles object.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetUser($user_login = null) {

@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -37,7 +37,7 @@ namespace FluitoPHP\Authorization;
  *      6. Enable
  *      7. Disable
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class Role {
@@ -46,7 +46,7 @@ class Role {
      * Used for storing role name.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $role = null;
@@ -55,7 +55,7 @@ class Role {
      * Used for storing role data.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $roledata = null;
@@ -64,7 +64,7 @@ class Role {
      * Used to store the authentication instance.
      *
      * @var \FluitoPHP\Authentication\Authentication
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $authentication = null;
@@ -73,7 +73,7 @@ class Role {
      * Used to store the authorization instance.
      *
      * @var \FluitoPHP\Authorization\Authorization
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $authorization = null;
@@ -82,7 +82,7 @@ class Role {
      * Used to store the database instance.
      *
      * @var \FluitoPHP\Database\Database
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $database = null;
@@ -91,7 +91,7 @@ class Role {
      * Used to initialize the role object.
      *
      * @param string $role Provide the role name.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     function __construct($role) {
@@ -164,7 +164,7 @@ class Role {
      * Used to get the role name.
      *
      * @return mixed Returns the role name else false.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetRole() {
@@ -183,7 +183,7 @@ class Role {
      * Used to get the Role data.
      *
      * @return mixed Returns the role data else false.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetRoleData() {
@@ -331,7 +331,7 @@ class Role {
      * @param array $data Provide the details for the role. 'role' key is mandatory in case of create.
      * @param bool $adminEdit Provide true if you want to edit administrator role. Caution this should be used only by internal functions.
      * @return mixed Returns true if created/updated else \FluitoPHP\Error\Error will be returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetRoleData($data, $adminEdit = false) {
@@ -595,7 +595,7 @@ class Role {
      *
      * @param bool $enabled Provide true to enable false to disable the role.
      * @return mixed Returns true if enabled else \FluitoPHP\Error\Error will be returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private function EnableDisable($enabled = true) {
@@ -829,7 +829,7 @@ class Role {
      * Used to enable this role.
      *
      * @return mixed Returns true if enabled else \FluitoPHP\Error\Error will be returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Enable() {
@@ -842,7 +842,7 @@ class Role {
      * Used to disable this role.
      *
      * @return mixed Returns true if disable else \FluitoPHP\Error\Error will be returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Disable() {

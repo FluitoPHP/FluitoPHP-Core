@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -20,7 +20,7 @@ namespace FluitoPHP;
  * Check and enable Debugger. Used for storing the debug flag.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (getenv('DEBUG') &&
@@ -45,7 +45,7 @@ if (getenv('DEBUG') &&
  * Used for storing the web path which is restricted to be used by the web apps so that no conflict occurs.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('RESTRICTED')) {
@@ -59,7 +59,7 @@ if (!defined('RESTRICTED')) {
  * Used for storing the web path which is restricted to be used by the web apps so that no conflict occurs.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('RESOURCES')) {
@@ -73,7 +73,7 @@ if (!defined('RESOURCES')) {
  * Used for storing core library path.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('CORE')) {
@@ -87,7 +87,7 @@ if (!defined('CORE')) {
  * Used for storing library path.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('LIB')) {
@@ -101,7 +101,7 @@ if (!defined('LIB')) {
  * Used for storing extensions path.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('EXTENSIONS')) {
@@ -115,7 +115,7 @@ if (!defined('EXTENSIONS')) {
  * Used for storing application path.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('APP')) {
@@ -129,7 +129,7 @@ if (!defined('APP')) {
  * Used for storing configuration path.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('CONFIG')) {
@@ -143,7 +143,7 @@ if (!defined('CONFIG')) {
  * Used for storing bootloaders path.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('BOOT')) {
@@ -157,7 +157,7 @@ if (!defined('BOOT')) {
  * Used for storing modules path.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('MODULE')) {
@@ -171,7 +171,7 @@ if (!defined('MODULE')) {
  * Used for storing module configuration path.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('MODCONFIG')) {
@@ -185,7 +185,7 @@ if (!defined('MODCONFIG')) {
  * Used for storing module bootloaders path.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('MODBOOT')) {
@@ -199,7 +199,7 @@ if (!defined('MODBOOT')) {
  * Used for storing models path.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('MODELS')) {
@@ -213,7 +213,7 @@ if (!defined('MODELS')) {
  * Used for storing controllers path.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('CONTROLLERS')) {
@@ -227,7 +227,7 @@ if (!defined('CONTROLLERS')) {
  * Used for storing views path.
  *
  * @type string
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 if (!defined('VIEWS')) {
@@ -291,7 +291,7 @@ if (!defined('VIEWS')) {
  *      24. Filters
  *      25. Extract
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class FluitoPHP {
@@ -300,7 +300,7 @@ class FluitoPHP {
      * Singleton Instance variable.
      *
      * @var \FluitoPHP\FluitoPHP
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static private $instance = null;
@@ -309,7 +309,7 @@ class FluitoPHP {
      * Instance type variable.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $instanceType = null;
@@ -318,7 +318,7 @@ class FluitoPHP {
      * Config type variable.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $configType = null;
@@ -327,7 +327,7 @@ class FluitoPHP {
      * Used for storing global application configuration.
      *
      * @var \FluitoPHP\Config\Config
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $globalConfig = null;
@@ -336,7 +336,7 @@ class FluitoPHP {
      * Used for storing module configuration.
      *
      * @var \FluitoPHP\Config\Config
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $moduleConfig = null;
@@ -345,7 +345,7 @@ class FluitoPHP {
      * Used for storing previous error handler.
      *
      * @var callable
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $prevErrorHandler = null;
@@ -354,7 +354,7 @@ class FluitoPHP {
      * Used for storing the output.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $output = '';
@@ -363,7 +363,7 @@ class FluitoPHP {
      * Used for storing list of non-fatal errors/notices/warnings generated.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $noticeWarnings = [];
@@ -372,7 +372,7 @@ class FluitoPHP {
      * Used for storing loaded extensions.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $loadedExtensions = [];
@@ -381,7 +381,7 @@ class FluitoPHP {
      * Used to store start time of the request.
      *
      * @var float
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $startTime = null;
@@ -390,7 +390,7 @@ class FluitoPHP {
      * Used for storing data for current request.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $data = [];
@@ -398,7 +398,7 @@ class FluitoPHP {
     /**
      * Private constructor to use this class as a singleton class.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private function __construct() {
@@ -481,7 +481,7 @@ class FluitoPHP {
      * @param string $instanceType Provide this to call setup in same function.
      * @param string $configType Provide this as 'INI' (Only option available).
      * @return \FluitoPHP\FluitoPHP Returns this instance object.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static public function GetInstance($instanceType = null, $configType = 'INI') {
@@ -505,7 +505,7 @@ class FluitoPHP {
      * This function is used by FluitoPHP system.
      *
      * @param string $className This is the class name this function required to fetch.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Autoloader($className) {
@@ -548,7 +548,7 @@ class FluitoPHP {
      * @param string $errfile Contains the filename that the error was raised in, as a string.
      * @param int $errline Contains the line number the error was raised at, as an integer.
      * @param array $errcontext This points to the active symbol table at the point the error occurred.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function ErrorHandler($severity, $errstr, $errfile, $errline, $errcontext) {
@@ -572,7 +572,7 @@ class FluitoPHP {
      * Used to handle exceptions.
      *
      * @param \Exception $exception This method will handle all the exceptions which are occurred in the system.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function ExceptionHandler($exception) {
@@ -608,7 +608,7 @@ class FluitoPHP {
     /**
      * This method ends the application run.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Shutdown() {
@@ -702,7 +702,7 @@ class FluitoPHP {
      * @param string $instanceType Provide the instance type, e.g. PRODUCTION, DEVELOPMENT etc
      * @param string $configType Provide the configuration type, e.g. INI etc
      * @return $this Self reference is returned for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Setup($instanceType, $configType = 'INI') {
@@ -747,7 +747,7 @@ class FluitoPHP {
     /**
      * Used to run the application and render the response.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Run() {
@@ -779,7 +779,7 @@ class FluitoPHP {
      * @param string $variable Provide the variable name to be fetched.
      * @return mixed Returns the value of the variable, either array or string.
      * @throws \Exception Exception is thrown if the configuration file is not read.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetConfig($variable = null) {
@@ -796,7 +796,7 @@ class FluitoPHP {
      * @param bool $freezeModule Provide true to fix the module. Module once fixed it cannot be updated.
      * @return mixed Returns the value of the variable, either array or string.
      * @throws \Exception Exception is thrown if the configuration file is not read.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetModuleConfig($variable = null, $freezeModule = true) {
@@ -832,7 +832,7 @@ class FluitoPHP {
     /**
      * Used to run bootloaders.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Boot() {
@@ -916,7 +916,7 @@ class FluitoPHP {
      * Used to get the list of non-fatal errors/notices/warnings generated in the runtime.
      *
      * @return array Returns the list of non-fatal errors/notices/warnings generated in the runtime.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function NoticeWarningsList() {
@@ -932,7 +932,7 @@ class FluitoPHP {
      * @param mixed $args Provide if any arguments needs to be provided to the class.
      * @param int $instance Provide the instance number of the extension. Normally singleton class have only one instance, providing instance other than zero will convert back to zero.
      * @return mixed Returns the object of the loaded extension.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function Load($extension, $args = null, $instance = 0) {
@@ -1017,7 +1017,7 @@ class FluitoPHP {
      * Used to get request object.
      *
      * @return \FluitoPHP\Request\Request Used to fetch request object for quick access.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Request() {
@@ -1029,7 +1029,7 @@ class FluitoPHP {
      * Used to get response object.
      *
      * @return \FluitoPHP\Response\Response Used to fetch response object for quick access.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Response() {
@@ -1041,7 +1041,7 @@ class FluitoPHP {
      * Used to get database object.
      *
      * @return \FluitoPHP\Database\Database Used to fetch database object for quick access.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function DB() {
@@ -1055,7 +1055,7 @@ class FluitoPHP {
      * Used to get session object.
      *
      * @return \FluitoPHP\Session\Session Used to fetch session object for quick access.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Session() {
@@ -1069,7 +1069,7 @@ class FluitoPHP {
      * Used to get authentication object.
      *
      * @return \FluitoPHP\Authentication\Authentication Used to fetch authentication object for quick access.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Authentication() {
@@ -1083,7 +1083,7 @@ class FluitoPHP {
      * Used to get authorization object.
      *
      * @return \FluitoPHP\Authorization\Authorization Used to fetch authorization object for quick access.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Authorization() {
@@ -1100,7 +1100,7 @@ class FluitoPHP {
      * @param string $connectionid Provide the connection id to use.
      * @return \FluitoPHP\Model\Model Returns the model for the table.
      * @throws \Exception Throws the exception if the model name is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Model($modelName, $connectionid = null) {
@@ -1161,7 +1161,7 @@ class FluitoPHP {
      * @param string $key Provide the key value to store the data in data array.
      * @param mixed $value Provide the data value to be stored.
      * @return boolean Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Set($key, $value) {
@@ -1183,7 +1183,7 @@ class FluitoPHP {
      *
      * @param string $key Provide the key value to fetch the data from data array.
      * @return mixed Returns false if the key is not found in the data array else returns the value.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Get($key) {
@@ -1208,7 +1208,7 @@ class FluitoPHP {
      * Used to get events object.
      *
      * @return \FluitoPHP\Events\Events Used to fetch events object for quick access.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Events() {
@@ -1230,7 +1230,7 @@ class FluitoPHP {
      * Used to get filters object.
      *
      * @return \FluitoPHP\Filters\Filters Used to fetch filters object for quick access.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Filters() {
@@ -1252,7 +1252,7 @@ class FluitoPHP {
      * Used to extract array of data transfer array.
      *
      * @return array Returns the data transfer array.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function Extract() {

@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -41,7 +41,7 @@ namespace FluitoPHP\File;
  *      11. Delete
  *      12. Size
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class File {
@@ -50,7 +50,7 @@ class File {
      * Used for storing file path.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $filePath = null;
@@ -59,7 +59,7 @@ class File {
      * Used for storing connection mode.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $mode = 'w';
@@ -68,7 +68,7 @@ class File {
      * Used for storing use include path setting.
      *
      * @var bool
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $useIncludePath = false;
@@ -77,7 +77,7 @@ class File {
      * Used for storing file object.
      *
      * @var resource
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $fileObject = null;
@@ -91,7 +91,7 @@ class File {
      *                              Please visit: http://php.net/manual/en/function.fopen.php for possible modes.
      *                    'useIncludePath' => If we need to use the include path of the php.ini setting.
      * @throws \Exception Throws exception if the file is not found.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function __construct($args = []) {
@@ -112,7 +112,7 @@ class File {
     /**
      * Used to close the file resource.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function __destruct() {
@@ -133,7 +133,7 @@ class File {
      * @param string $useIncludePath If we need to use the include path of the php.ini setting.
      * @return $this Self reference is returned for chained calls.
      * @throws \Exception Throws exception if the file is not found.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetPath($filePath, $mode = 'a+', $useIncludePath = false) {
@@ -172,7 +172,7 @@ class File {
      * Used to get the filepath.
      *
      * @return string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetPath() {
@@ -185,7 +185,7 @@ class File {
      * Used to get the file connection mode.
      *
      * @return string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetMode() {
@@ -198,7 +198,7 @@ class File {
      * Used to get the setting to search in include_path.
      *
      * @return bool
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetIncludePathSetting() {
@@ -211,7 +211,7 @@ class File {
      * used to get the file resource object.
      *
      * @return resource
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetFileObject() {
@@ -227,7 +227,7 @@ class File {
      * @param int $whence Please visit: http://php.net/manual/en/function.fseek.php for possible values.
      * @return $this Self reference is returned for chained calls.
      * @throws \Exception Throws exception if the file is not initialized or is unable to seek the file.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Seek($offset, $whence = SEEK_SET) {
@@ -253,7 +253,7 @@ class File {
      *
      * @param int $length Length of the characters to be read.
      * @return string Data being read is returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Read($length = null) {
@@ -275,7 +275,7 @@ class File {
      * @param string $data Provide data string that needs to be written in the file.
      * @return $this Self reference is returned for chained calls.
      * @throws \Exception
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Write($data) {
@@ -293,7 +293,7 @@ class File {
      * Used to delete the file from disk.
      *
      * @throws \Exception Throws exception if the file is not initialized or is unable to delete.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Delete() {
@@ -319,7 +319,7 @@ class File {
      * Used to get the file size.
      *
      * @return int Returns the file size in bytes.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Size() {

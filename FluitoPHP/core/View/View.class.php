@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -47,7 +47,7 @@ namespace FluitoPHP\View;
  *      12. RefreshView
  *      13. LoadTemplate
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class View extends \FluitoPHP\Base\Base {
@@ -56,7 +56,7 @@ class View extends \FluitoPHP\Base\Base {
      * Used to store the header template.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $header = "header";
@@ -65,7 +65,7 @@ class View extends \FluitoPHP\Base\Base {
      * Used to store the footer template.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $footer = "footer";
@@ -74,7 +74,7 @@ class View extends \FluitoPHP\Base\Base {
      * Used to store the view template.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $view = null;
@@ -83,7 +83,7 @@ class View extends \FluitoPHP\Base\Base {
      * Used to store the alternate folder based view template.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $altView = null;
@@ -92,7 +92,7 @@ class View extends \FluitoPHP\Base\Base {
      * Used to store the error header template.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $errorHeader = "header";
@@ -101,7 +101,7 @@ class View extends \FluitoPHP\Base\Base {
      * Used to store the error footer template.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $errorFooter = "footer";
@@ -110,7 +110,7 @@ class View extends \FluitoPHP\Base\Base {
      * Used to store the error view template.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $errorView = null;
@@ -119,7 +119,7 @@ class View extends \FluitoPHP\Base\Base {
      * Used to store the html title.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $title = "FluitoPHP: Page";
@@ -128,7 +128,7 @@ class View extends \FluitoPHP\Base\Base {
      * Used to store the html error title.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $errorTitle = "FluitoPHP: Error";
@@ -136,7 +136,7 @@ class View extends \FluitoPHP\Base\Base {
     /**
      * Constructor to initialize this class.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     function __construct() {
@@ -150,7 +150,7 @@ class View extends \FluitoPHP\Base\Base {
      * Used to the load the view.
      *
      * @throws \FluitoPHP\HttpException\HttpException Throws exception if the view template is not found.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Run() {
@@ -229,7 +229,7 @@ class View extends \FluitoPHP\Base\Base {
      * Used to the load the view.
      *
      * @throws \FluitoPHP\HttpException\HttpException Throws exception if the view template is not found.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function HandleError() {
@@ -314,7 +314,7 @@ class View extends \FluitoPHP\Base\Base {
      * Used to set the header template.
      *
      * @param string $header Provide the header template name or filepath.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetHeader($header) {
@@ -327,7 +327,7 @@ class View extends \FluitoPHP\Base\Base {
      * Used to set the footer template.
      *
      * @param string $footer Provide the footer template name or filepath.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetFooter($footer) {
@@ -341,7 +341,7 @@ class View extends \FluitoPHP\Base\Base {
      *
      * @param string $view Provide the view template name or filepath.
      * @return boolean Returns true if the template is found and sets the template else false is returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetView($view) {
@@ -364,7 +364,7 @@ class View extends \FluitoPHP\Base\Base {
      * Used to set the error header template.
      *
      * @param string $errorHeader Provide the error header template name or filepath.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetErrorHeader($errorHeader) {
@@ -377,7 +377,7 @@ class View extends \FluitoPHP\Base\Base {
      * Used to set the error footer template.
      *
      * @param string $errorFooter Provide the error footer template name or filepath.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetErrorFooter($errorFooter) {
@@ -391,7 +391,7 @@ class View extends \FluitoPHP\Base\Base {
      *
      * @param string $errorView Provide the error view template name or filepath.
      * @return boolean Returns true if the template is found and sets the template else false is returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetErrorView($errorView) {
@@ -415,7 +415,7 @@ class View extends \FluitoPHP\Base\Base {
      *
      * @param string $title Provide the new html title to set.
      * @return string Returns the old html title if the parameter is provided else current html title is returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Title($title = null) {
@@ -441,7 +441,7 @@ class View extends \FluitoPHP\Base\Base {
      *
      * @param string $errorTitle Provide the new html error title to set.
      * @return string Returns the old html error title if the parameter is provided else current html error title is returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function ErrorTitle($errorTitle = null) {
@@ -465,7 +465,7 @@ class View extends \FluitoPHP\Base\Base {
     /**
      * Used to refresh the view template.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function RefreshView() {
@@ -491,7 +491,7 @@ class View extends \FluitoPHP\Base\Base {
      * @param string $template Provide the name of the template or full path to the template file.
      * @param string $extension Provide the extension of the template. This is not required when the full path is provided or the template is of php extension.
      * @return string Returns true if the template is loaded else returns false.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function LoadTemplate($template = '', $extension = 'php') {

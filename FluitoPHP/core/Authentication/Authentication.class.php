@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -46,7 +46,7 @@ namespace FluitoPHP\Authentication;
  *      16. FulfillPasswordReset
  *      17. GetUserList
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class Authentication {
@@ -55,7 +55,7 @@ class Authentication {
      * Used for storing Singleton instance.
      *
      * @var \FluitoPHP\Authentication\Authentication
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static private $instance = null;
@@ -64,7 +64,7 @@ class Authentication {
      * Used to store the configuration.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $config = array(
@@ -78,7 +78,7 @@ class Authentication {
      * Used to store the current user object.
      *
      * @var \FluitoPHP\Authentication\User
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $currentUser = null;
@@ -87,7 +87,7 @@ class Authentication {
      * Used to store the database instance.
      *
      * @var \FluitoPHP\Database\Database
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $database = null;
@@ -95,7 +95,7 @@ class Authentication {
     /**
      * Used to make this class as a singleton class.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private function __construct() {
@@ -125,7 +125,7 @@ class Authentication {
      * Used to fetch the Instance object globally.
      *
      * @return \FluitoPHP\Authentication\Authentication Returns this instance object.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static public function GetInstance() {
@@ -142,7 +142,7 @@ class Authentication {
      * Used to update the configuration of the authentication.
      *
      * @param array $config Provide the configuration options.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function UpdateConfig($config = []) {
@@ -203,7 +203,7 @@ class Authentication {
     /**
      * Used to get table prefix of authentication.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetPrefix() {
@@ -215,7 +215,7 @@ class Authentication {
     /**
      * Used to get database connection of authentication.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetConn() {
@@ -227,7 +227,7 @@ class Authentication {
     /**
      * Used to create/upgrade the base tables for authentication.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Upgrade() {
@@ -517,7 +517,7 @@ class Authentication {
      * @param string $password Provide the password to be hashed.
      * @param bool $isSalt Provide true if this is a hashing of salt.
      * @return string Returns the hashed password.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function PasswordHash($password, $isSalt = false) {
@@ -546,7 +546,7 @@ class Authentication {
      * @param string $hashedPassword Provide the password hash for verification.
      * @param bool $isSalt Provide true if this is a verification of salt.
      * @return string Returns true if the password matches the hash else false instead.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function PasswordVerify($password, $hashedPassword, $isSalt = false) {
@@ -574,7 +574,7 @@ class Authentication {
      * @param string $password Provide the user password.
      * @param bool $remember Provide true if needs to be remembered.
      * @return mixed Returns true on success else returns the error message.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Login($user_login, $password, $remember = false) {
@@ -621,7 +621,7 @@ class Authentication {
      * @param string $user_login Provide the user login or user id.
      * @param bool $remember Provide true if needs to be remembered.
      * @return mixed Returns true on success else returns the error message.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetUser($user_login = null, $remember = false) {
@@ -717,7 +717,7 @@ class Authentication {
      *
      * @param bool $noReset Provide true if you want to just check the login and not update the access time. Default: false
      * @return \FluitoPHP\Authentication\User Returns user if logged in else returns system user.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetUser($noReset = false) {
@@ -817,7 +817,7 @@ class Authentication {
      *
      * @param bool $noReset Provide true if you want to just check the login and not update the access time. Default: false
      * @return \FluitoPHP\Authentication\User Returns user if logged in else returns false.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetLoggedInUser($noReset = false) {
@@ -836,7 +836,7 @@ class Authentication {
     /**
      * Used to logout a user.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Logout() {
@@ -876,7 +876,7 @@ class Authentication {
      *
      * @param string $user_login Provide the user id/login.
      * @return mixed Returns true if disabled else \FluitoPHP\Error\Error will be returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function DisableUser($user_login) {
@@ -1030,7 +1030,7 @@ class Authentication {
      *
      * @param string $user_login Provide the user id/login.
      * @return mixed Returns reset password salt_id and salt in an associative array if generated else \FluitoPHP\Error\Error is returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function CreatePasswordReset($user_login) {
@@ -1109,7 +1109,7 @@ class Authentication {
      * @param string $salt_id Provide the salt id.
      * @param string $salt Provide the salt to compare with salt hash.
      * @return mixed Returns user id if validated else \FluitoPHP\Error\Error is returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function ValidatePasswordReset($salt_id, $salt) {
@@ -1182,7 +1182,7 @@ class Authentication {
      * @param string $salt Provide the salt to compare with salt hash.
      * @param string $password Provide the password to set.
      * @return mixed Returns true if fulfilled else \FluitoPHP\Error\Error is returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function FulfillPasswordReset($salt_id, $salt, $password) {
@@ -1235,7 +1235,7 @@ class Authentication {
      * Used to list the users in the system.
      *
      * @param bool $activeOnly Provide true if only active users are required to be fetched.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetUserList($activeOnly = false) {

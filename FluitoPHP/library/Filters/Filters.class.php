@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -34,7 +34,7 @@ namespace FluitoPHP\Filters;
  *      4. Remove
  *      5. Run
  * 
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class Filters {
@@ -43,7 +43,7 @@ class Filters {
      * Used for storing Singleton instance.
      * 
      * @var \FluitoPHP\Filters\Filters
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static private $instance = null;
@@ -52,7 +52,7 @@ class Filters {
      * Used to store the filters and run them suitably.
      * 
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $filtersMap = [];
@@ -61,7 +61,7 @@ class Filters {
      * Used to store the arguments of filters.
      * 
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $argsMap = [];
@@ -70,7 +70,7 @@ class Filters {
      * Used to store the priorities of filters.
      * 
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $priorityMap = [];
@@ -78,7 +78,7 @@ class Filters {
     /**
      * Used to make this class as a singleton class.
      * 
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private function __construct() {
@@ -89,7 +89,7 @@ class Filters {
      * Used to fetch the Instance object globally.
      * 
      * @return \FluitoPHP\Filters\Filters Returns this instance object.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static public function GetInstance() {
@@ -110,7 +110,7 @@ class Filters {
      * @param int $arguments Number of arguments provided irrespective of the number of arguments in the call, default is 1.
      * @param int $priority Priority of the function, default is 10.
      * @return bool Returns true if successfully registers the function.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Add($filterId, $function, $arguments = 1, $priority = 10) {
@@ -164,7 +164,7 @@ class Filters {
      * @param string $filterId Filter ID from which the function is required to be removed.
      * @param callable $function Function definition which is required to be removed from the filter.
      * @return bool Returns true when successfully removed the function.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Remove($filterId, $function) {
@@ -203,7 +203,7 @@ class Filters {
      * @param mixed $object Provide the object that needs to be filtered.
      * @param mixed $parameters Provide the additional parameters.
      * @return void This function do not return any value, instead return is called when there is nothing to do.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Run() {

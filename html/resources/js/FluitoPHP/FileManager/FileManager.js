@@ -10,7 +10,7 @@
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
- * @author        Neha Jain
+ * @author        Vipin Jain
  */
 
 if (typeof jQuery.FluitoPHP === 'undefined') {

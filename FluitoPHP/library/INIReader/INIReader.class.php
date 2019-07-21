@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -33,7 +33,7 @@ namespace FluitoPHP\INIReader;
  *      3. GetParseSections
  *      4. Fetch
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class INIReader extends \FluitoPHP\File\File {
@@ -42,7 +42,7 @@ class INIReader extends \FluitoPHP\File\File {
      * Used for storing inheritance setting.
      *
      * @var bool
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $inheritance = true;
@@ -51,7 +51,7 @@ class INIReader extends \FluitoPHP\File\File {
      * Used for storing parseSections setting.
      *
      * @var bool
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $parseSections = true;
@@ -60,7 +60,7 @@ class INIReader extends \FluitoPHP\File\File {
      * Used for storing decodeEnvars setting.
      *
      * @var bool
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $decodeEnvars = true;
@@ -69,7 +69,7 @@ class INIReader extends \FluitoPHP\File\File {
      * Used for storing INI generated array.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $INIArray = null;
@@ -85,7 +85,7 @@ class INIReader extends \FluitoPHP\File\File {
      *                    'decodeEnvars' => Provide true to update the %ENVAR% to be updated with the
      *                                      environment variables from OS/Web Server OR set variable
      *                                      set explicitly.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function __construct($args = []) {
@@ -109,7 +109,7 @@ class INIReader extends \FluitoPHP\File\File {
      * Used to get inheritance setting.
      *
      * @return bool Returns the inheritance setting value.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetInheritance() {
@@ -122,7 +122,7 @@ class INIReader extends \FluitoPHP\File\File {
      * Used to get parseSections setting.
      *
      * @return bool Returns the parse sections setting.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetParseSections() {
@@ -135,7 +135,7 @@ class INIReader extends \FluitoPHP\File\File {
      * Used to read the ini file data.
      *
      * @return array returns the INI data in multi-dimensional array format.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Fetch() {

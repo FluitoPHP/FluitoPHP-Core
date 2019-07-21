@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -28,7 +28,7 @@ namespace FluitoPHP\HTMLGenerator;
  *      1. __construct
  *      2. GenerateFromArray
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class HTMLGenerator {
@@ -36,7 +36,7 @@ class HTMLGenerator {
     /**
      * Used to initialize this class.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     function __construct() {
@@ -59,7 +59,7 @@ class HTMLGenerator {
      *
      * @param array $elements Provide the reference array of elements.
      * @return string Returns the generated HTML.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static public function GenerateFromArray($elements) {

@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -43,7 +43,7 @@ namespace FluitoPHP\Base;
  *      15. Load
  *      16. Extract
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class Base {
@@ -52,7 +52,7 @@ class Base {
      * Used for storing framework object.
      *
      * @var \FluitoPHP\FluitoPHP
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static private $framework = null;
@@ -61,7 +61,7 @@ class Base {
      * Used for storing view.
      *
      * @var \FluitoPHP\View\View
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static private $view = null;
@@ -70,7 +70,7 @@ class Base {
      * Used to get framework object.
      *
      * @return \FluitoPHP\FluitoPHP Used to fetch framework object for quick access.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final protected function Framework() {
@@ -87,7 +87,7 @@ class Base {
      * Used to get request object.
      *
      * @return \FluitoPHP\Request\Request Used to fetch request object for quick access.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final protected function Request() {
@@ -101,7 +101,7 @@ class Base {
      * Used to get response object.
      *
      * @return \FluitoPHP\Response\Response Used to fetch response object for quick access.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final protected function Response() {
@@ -115,7 +115,7 @@ class Base {
      * Used to get database object.
      *
      * @return \FluitoPHP\Database\Database Used to fetch database object for quick access.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final protected function DB() {
@@ -129,7 +129,7 @@ class Base {
      * Used to get session object.
      *
      * @return \FluitoPHP\Session\Session Used to fetch session object for quick access.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final protected function Session() {
@@ -143,7 +143,7 @@ class Base {
      * Used to get authentication object.
      *
      * @return \FluitoPHP\Authentication\Authentication Used to fetch authentication object for quick access.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final protected function Authentication() {
@@ -157,7 +157,7 @@ class Base {
      * Used to get authorization object.
      *
      * @return \FluitoPHP\Authorization\Authorization Used to fetch authorization object for quick access.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final protected function Authorization() {
@@ -171,7 +171,7 @@ class Base {
      * Used to get current View object.
      *
      * @return \FluitoPHP\View\View Returns current View object.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final protected function View() {
@@ -192,7 +192,7 @@ class Base {
      * @param type $modelName Provide the model name or table name.
      * @return \FluitoPHP\Model\Model Returns the model for the table.
      * @throws \Exception Throws the exception if the model name is not correct.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final protected function Model($modelName) {
@@ -208,7 +208,7 @@ class Base {
      * @param string $key Provide the key value to store the data in data array.
      * @param mixed $value Provide the data value to be stored.
      * @return boolean Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final protected function Set($key, $value) {
@@ -223,7 +223,7 @@ class Base {
      *
      * @param string $key Provide the key value to fetch the data from data array.
      * @return mixed Returns false if the key is not found in the data array else returns the value.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final protected function Get($key) {
@@ -243,7 +243,7 @@ class Base {
      * @param array $query Provide query in associative array.
      * @param string $customPrefix Provide custom prefix to use instead of the current host.
      * @return string Returns the generated URL.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final protected function URL($pathOrController = '', $action = '', $module = '', $addArgs = [], $query = [], $customPrefix = null) {
@@ -257,7 +257,7 @@ class Base {
      * Used to get events object.
      *
      * @return \FluitoPHP\Events\Events Used to fetch events object for quick access.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final protected function Events() {
@@ -271,7 +271,7 @@ class Base {
      * Used to get filters object.
      *
      * @return \FluitoPHP\Filters\Filters Used to fetch filters object for quick access.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final protected function Filters() {
@@ -288,7 +288,7 @@ class Base {
      * @param mixed $args Provide if any arguments needs to be provided to the class.
      * @param int $instance Provide the instance number of the extension. Normally singleton class have only one instance, providing instance other than zero will convert back to zero.
      * @return mixed Returns the object of the loaded extension.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final protected function Load($extension, $args = null, $instance = 0) {
@@ -302,7 +302,7 @@ class Base {
      * Used to extract array of data transfer array.
      *
      * @return array Returns the data transfer array.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     final public function Extract() {

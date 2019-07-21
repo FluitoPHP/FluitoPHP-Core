@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -51,7 +51,7 @@ namespace FluitoPHP\Session;
  *      18. SetFlash
  *      19. PersistFlash
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class Session {
@@ -60,7 +60,7 @@ class Session {
      * Used for storing Singleton instance.
      *
      * @var \FluitoPHP\Session\Session
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static private $instance = null;
@@ -69,7 +69,7 @@ class Session {
      * Used for storing Flash data.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $flash = [];
@@ -78,7 +78,7 @@ class Session {
      * Used to store the items to persist in flash array.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $persistFlash = [];
@@ -87,7 +87,7 @@ class Session {
      * Used for storing Database data.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $dbconns = [];
@@ -96,7 +96,7 @@ class Session {
      * Used to store the initial configuration of session.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $initConfig = array(
@@ -128,7 +128,7 @@ class Session {
      * Store session successful closure.
      *
      * @var bool
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $endSessionSuccess = false;
@@ -136,7 +136,7 @@ class Session {
     /**
      * Private constructor to use this class as a singleton class.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private function __construct() {
@@ -358,7 +358,7 @@ class Session {
      * Used to fetch the singleton instance object.
      *
      * @return \FluitoPHP\Session\Session
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     static public function GetInstance() {
@@ -377,7 +377,7 @@ class Session {
      * @param string $path Give the path of the session directory.
      * @param string $name Give session name.
      * @return bool returns if the opening of session is successful.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Open($path, $name) {
@@ -440,7 +440,7 @@ class Session {
      * Used to close the open the session.
      *
      * @return bool Return true to successfully close the session.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Close() {
@@ -454,7 +454,7 @@ class Session {
      *
      * @param string $id Provide the Session ID here.
      * @return array Returns the array of data of that session.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Read($id) {
@@ -506,7 +506,7 @@ class Session {
      * @param string $id Provide the Session ID here.
      * @param array $data Provide the modified session data.
      * @return bool Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Write($id, $data) {
@@ -586,7 +586,7 @@ class Session {
      *
      * @param sstring $id Provide the Session ID here to destroy.
      * @return bool Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Destroy($id) {
@@ -633,7 +633,7 @@ class Session {
      * Used to garbage collect the sessions.
      *
      * @param int $maxlifetime Provide the maximum lifetime of a session.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GCCall($maxlifetime) {
@@ -712,7 +712,7 @@ class Session {
      * @param string $data Provide the decrypted session data.
      * @param string $key Provide the encryption key.
      * @return string Returns the encrypted session data.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private function Encrypt($data, $key) {
@@ -726,7 +726,7 @@ class Session {
      * @param string $data Provide the encrypted session data.
      * @param string $key Provide the encryption key.
      * @return string Returns the decrypted session data.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private function Decrypt($data, $key) {
@@ -737,7 +737,7 @@ class Session {
     /**
      * Used to remove the session flash which needs to be removed in this session.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private function UpdateFlash() {
@@ -763,7 +763,7 @@ class Session {
     /**
      * Used to call session closing routines.
      *
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function EndSession() {
@@ -794,7 +794,7 @@ class Session {
      * @param string $id Provide the database identifier.
      * @param mixed $data Provide the connection data in array or object format.
      * @return bool Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function DBCreate($id, $data) {
@@ -825,7 +825,7 @@ class Session {
      *
      * @param string $id Provide the database identifier.
      * @return bool Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function DBDestroy($id) {
@@ -852,7 +852,7 @@ class Session {
      *
      * @param string $id Provide the variable name for which data to be fetched.
      * @return mixed Returns false if variable not found else returns the data.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Get($id = null) {
@@ -873,7 +873,7 @@ class Session {
      * @param string $id Provide the variable name for which data to be stored.
      * @param mixed $data Provide the variable data.
      * @return bool Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Set($id, $data = null) {
@@ -893,7 +893,7 @@ class Session {
      *
      * @param string $id Provide the variable name for which data to be fetched.
      * @return mixed Returns false if variable not found else returns the data.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetFlash($id = null) {
@@ -916,7 +916,7 @@ class Session {
      * @param string $id Provide the variable name for which data to be stored.
      * @param mixed $data Provide the variable data.
      * @return bool Returns true on success and false on failure.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetFlash($id, $data = null) {
@@ -939,7 +939,7 @@ class Session {
      *
      * @param string $id Provide the variable name for which data to be persisted.
      * @return bool Returns true on success and false if the variable is not found in the session flash data.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function PersistFlash($id) {

@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -42,7 +42,7 @@ namespace FluitoPHP\Authentication;
  *      11. Enable
  *      12. Disable
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class User {
@@ -51,7 +51,7 @@ class User {
      * Used for storing User ID.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $userID = null;
@@ -60,7 +60,7 @@ class User {
      * Used to store the user login.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $userLogin = null;
@@ -69,7 +69,7 @@ class User {
      * Used to store the user data.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $userData = [];
@@ -78,7 +78,7 @@ class User {
      * Used to store the authentication instance.
      *
      * @var \FluitoPHP\Authentication\Authentication
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $authentication = null;
@@ -87,7 +87,7 @@ class User {
      * Used to store the database instance.
      *
      * @var \FluitoPHP\Database\Database
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $database = null;
@@ -97,7 +97,7 @@ class User {
      *
      * @param string $user_login Provide the user id/login.
      * @param bool $activeOnly Provide false if the non active user is required to be fetched.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     function __construct($user_login, $activeOnly = true) {
@@ -241,7 +241,7 @@ class User {
      * Used to get the User ID.
      *
      * @return mixed Returns the User ID else false.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetUserID() {
@@ -260,7 +260,7 @@ class User {
      * Used to get the User Login.
      *
      * @return mixed Returns the User Login else false.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetUserLogin() {
@@ -279,7 +279,7 @@ class User {
      * Used to fetch the password hash of the user.
      *
      * @return string Returns the password hash or false if unable to fetch.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     protected function GetPasswordHash() {
@@ -347,7 +347,7 @@ class User {
      *
      * @param string $password Provide the password for the user.
      * @return bool Returns true if success else false.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function ValidatePassword($password) {
@@ -380,7 +380,7 @@ class User {
      * @param string $newPassword Provide the new password that needs to be set.
      * @param string $oldPassword Provide the old password for verification.
      * @return mixed Returns password string if updated else \FluitoPHP\Error\Error is returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function ChangePassword($newPassword, $oldPassword) {
@@ -434,7 +434,7 @@ class User {
      * @param string $password Provide the new password that needs to be set.
      * @param bool $generate Provide true if no password is null and a new password needs to be generated.
      * @return mixed Returns password string if updated else \FluitoPHP\Error\Error is returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function UpdatePassword($password, $generate = false) {
@@ -529,7 +529,7 @@ class User {
      * Used to get the user data.
      *
      * @return mixed Returns associative array of the user data else false.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetUserData() {
@@ -625,7 +625,7 @@ class User {
      * @param array $data Provide the details for the user. 'user_login' key is mandatory in case of create.
      * @param bool $use_login Provide true if user_login should be used to create the new user as user id.
      * @return mixed Returns true if created/updated else \FluitoPHP\Error\Error will be returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function SetUserData($data, $use_login = false) {
@@ -983,7 +983,7 @@ class User {
      *
      * @param bool $enabled Provide true to enable false to disable the user.
      * @return mixed Returns true if enabled else \FluitoPHP\Error\Error will be returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private function EnableDisable($enabled = true) {
@@ -1120,7 +1120,7 @@ class User {
      * Used to enable this user.
      *
      * @return mixed Returns true if enabled else \FluitoPHP\Error\Error will be returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Enable() {
@@ -1133,7 +1133,7 @@ class User {
      * Used to disable this user.
      *
      * @return mixed Returns true if disable else \FluitoPHP\Error\Error will be returned.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Disable() {

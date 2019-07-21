@@ -2,13 +2,13 @@
 
 /**
  * FluitoPHP(tm): Lightweight MVC (http://www.fluitophp.org)
- * Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) 2017, FluitoSoft (http://www.fluitosoft.com)
+ * @copyright     Copyright (c) 2019, Vipin Jain (http://www.codesnsolutions.com)
  * @link          http://www.fluitophp.org FluitoPHP(tm): Lightweight MVC
  * @since         0.1
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -38,7 +38,7 @@ namespace FluitoPHP\Config;
  *      3. Get
  *      4. GetModule
  *
- * @author Neha Jain
+ * @author Vipin Jain
  * @since  0.1
  */
 class Config {
@@ -47,7 +47,7 @@ class Config {
      * Used for storing default instance type.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $defaultInstanceType = 'PRODUCTION';
@@ -56,7 +56,7 @@ class Config {
      * Used for storing instance type.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $instanceType = null;
@@ -65,7 +65,7 @@ class Config {
      * Used for storing current requested module.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $module = null;
@@ -74,7 +74,7 @@ class Config {
      * Used for storing default configuration type.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $defaultConfigType = 'INI';
@@ -83,7 +83,7 @@ class Config {
      * Used for storing configuration type.
      *
      * @var string
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $configType = null;
@@ -92,7 +92,7 @@ class Config {
      * Used for storing available configuration types.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $configTypes = array('INI');
@@ -101,7 +101,7 @@ class Config {
      * Used for storing available configuration type extensions.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $configExtensions = array(
@@ -112,7 +112,7 @@ class Config {
      * Used for storing currently read configuration.
      *
      * @var array
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $config = null;
@@ -121,7 +121,7 @@ class Config {
      * Used for storing currently read configuration object.
      *
      * @var \FluitoPHP\INIReader\INIReader
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private $configObject = null;
@@ -133,7 +133,7 @@ class Config {
      *                    'instanceType' => Provide the instance type. e.g.: PRODUCTION, DEVELOPMENT
      *                    'module' => Provide current module name for which configuration needs to be fetched.
      *                    'configType' => Provide the configuration type from the list of available configuration types.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function __construct($args = []) {
@@ -155,7 +155,7 @@ class Config {
      * @param string $module Provide current module name for which configuration needs to be fetched.
      * @param string $configType Provide the configuration type from the list of available configuration types.
      * @return $this Return the object itself for chained calls.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Fetch($instanceType, $module = null, $configType = 'INI') {
@@ -336,7 +336,7 @@ class Config {
      *
      * @param type $returnConfig The configuration array that needs to be updated with the include.
      * @param type $includer The configuration that needs to included.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     private function Includer(&$returnConfig, $includer) {
@@ -397,7 +397,7 @@ class Config {
      * @param string $variable Provide the variable name from the configuration file.
      * @return mixed This method returns the value of the variable from the configuration file, either array or string.
      * @throws \Exception Exception is thrown if the configuration file is not read.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function Get($variable = null) {
@@ -424,7 +424,7 @@ class Config {
      * Used to get module of the current configuration.
      *
      * @return string Returns module name for the configuration else returns null in case this is global configuration.
-     * @author Neha Jain
+     * @author Vipin Jain
      * @since  0.1
      */
     public function GetModule() {
