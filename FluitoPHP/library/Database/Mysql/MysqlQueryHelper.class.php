@@ -1044,7 +1044,8 @@ class MysqlQueryHelper extends \FluitoPHP\Database\DBQueryHelper {
             if (count($this->
                             indexes)) {
 
-                foreach ($indexesArr as $index => $parms) {
+                foreach ($this->
+                indexes as $index => $parms) {
 
                     $alterDefn = "";
                     $indexName = "";
