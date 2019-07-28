@@ -892,7 +892,7 @@ class Request {
 
                 $errorHandle = 'index';
 
-                if (class_exists('HttpException') &&
+                if (class_exists('\FluitoPHP\HttpException\HttpException') &&
                         $exception instanceof \FluitoPHP\HttpException\HttpException) {
 
                     if (is_callable(array($handlerObject,
