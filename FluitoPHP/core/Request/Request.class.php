@@ -767,14 +767,27 @@ class Request {
     /**
      * Used to get the parsedURL array.
      *
-     * @return array
+     * @param int $index Provide index of the url parameter. Provide null or no parameter for all parameters.
+     * @return mixed Returns the array of url variables if null or no parameter is provided else the url var of the index if exists else false.
      * @author Vipin Jain
      * @since  0.1
      */
-    public function GetURLVars() {
+    public function GetURLVars($index = null) {
 
-        return $this->
-                parsedURL;
+        if ($index === null) {
+
+            return $this->
+                    parsedURL;
+        }
+
+        if (!is_int($index)) {
+
+            $index = (int) $index;
+        }
+
+        return isset($this->
+                        parsedURL[$index]) ? $this->
+                parsedURL[$index] : false;
     }
 
     /**
