@@ -849,6 +849,11 @@ class FluitoPHP {
         foreach ($this->
         bootloaderFiles as $file) {
 
+            if (stripos($file, 'Boot.class.php') === false) {
+
+                continue;
+            }
+
             $classname = str_replace('Boot.class.php', '', $file) . 'Boot';
 
             if (!class_exists($classname)) {
@@ -889,6 +894,10 @@ class FluitoPHP {
 
         foreach ($this->
         bootloaderModuleFiles as $file) {
+
+            if (stripos($file, 'Boot.class.php') === false) {
+                continue;
+            }
 
             $classname = str_replace('Boot.class.php', '', $file) . 'Boot';
 
