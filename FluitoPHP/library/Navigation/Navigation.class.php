@@ -1121,12 +1121,19 @@ class Navigation extends \FluitoPHP\Base\Base {
     /**
      * Used to generate the html of the navigation.
      *
-     * @param string $filter Provide the name of the filter to be applied on the elements array.
+     * @param string $event Provide the name of the filter to be applied on the elements array.
      * @return mixed Returns the generated html of the navigation or generated array of the subnav.
      * @author Vipin Jain
      * @since  0.1
      */
-    public function Generate($filter = null) {
+    public function Generate($event = null) {
+
+        if (is_string($event) &&
+                $event) {
+
+            \FluitoPHP\Events\Events::GetInstance()->
+                    Run($event, $this);
+        }
 
         $return = [];
         $returnStr = '';
@@ -1247,11 +1254,11 @@ class Navigation extends \FluitoPHP\Base\Base {
             $return[] = $cont['suffix'];
         }
 
-        if (is_string($filter) &&
-                $filter) {
+        if (is_string($event) &&
+                $event) {
 
             $return = \FluitoPHP\Filters\Filters::GetInstance()->
-                    Run($filter, $return);
+                    Run($event . '.HTMLArray', $return);
         }
 
         if ($this->
@@ -1269,17 +1276,17 @@ class Navigation extends \FluitoPHP\Base\Base {
      * Used to render the navigation.
      * Sub-navigation will not get rendered.
      *
-     * @param string $filter Provide the name of the filter to be applied on the elements array.
+     * @param string $event Provide the name of the filter to be applied on the elements array.
      * @author Vipin Jain
      * @since  0.1
      */
-    public function Render($filter = null) {
+    public function Render($event = null) {
 
         if (!$this->
                         IsSubNav()) {
 
             echo $this->
-                    Generate($filter);
+                    Generate($event);
         }
     }
 

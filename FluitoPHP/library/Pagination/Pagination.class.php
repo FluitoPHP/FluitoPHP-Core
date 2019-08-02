@@ -982,12 +982,19 @@ class Pagination extends \FluitoPHP\Base\Base {
     /**
      * Used to generate the html of the pagination/pager.
      *
-     * @param string $filter Provide the name of the filter to be applied on the elements array.
+     * @param string $event Provide the name of the filter to be applied on the elements array.
      * @return string Returns the generated html of the pagination/pager.
      * @author Vipin Jain
      * @since  0.1
      */
-    public function Generate($filter = null) {
+    public function Generate($event = null) {
+
+        if (is_string($event) &&
+                $event) {
+
+            \FluitoPHP\Events\Events::GetInstance()->
+                    Run($event, $this);
+        }
 
         $return = [];
         $returnStr = '';
@@ -1189,11 +1196,11 @@ class Pagination extends \FluitoPHP\Base\Base {
             $return[] = $cont['suffix'];
         }
 
-        if (is_string($filter) &&
-                $filter) {
+        if (is_string($event) &&
+                $event) {
 
             $return = \FluitoPHP\Filters\Filters::GetInstance()->
-                    Run($filter, $return);
+                    Run($event . '.HTMLArray', $return);
         }
 
         $returnStr .= \FluitoPHP\HTMLGenerator\HTMLGenerator::GenerateFromArray($return);
@@ -1204,14 +1211,14 @@ class Pagination extends \FluitoPHP\Base\Base {
     /**
      * Used to render the pagination/pager.
      *
-     * @param string $filter Provide the name of the filter to be applied on the elements array.
+     * @param string $event Provide the name of the filter to be applied on the elements array.
      * @author Vipin Jain
      * @since  0.1
      */
-    public function Render($filter = null) {
+    public function Render($event = null) {
 
         echo $this->
-                Generate($filter);
+                Generate($event);
     }
 
 }
