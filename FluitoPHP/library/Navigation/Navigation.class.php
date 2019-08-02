@@ -329,7 +329,7 @@ class Navigation extends \FluitoPHP\Base\Base {
      * @author Vipin Jain
      * @since  0.1
      */
-    public function AddElement($name, $url, $title = null, $params = [], $position = null) {
+    public function AddElement($name, $url, $title = null, $params = [], $position = null, $active = false) {
 
         if (!is_string($name) ||
                 !strlen($name) ||
@@ -369,12 +369,18 @@ class Navigation extends \FluitoPHP\Base\Base {
                     config['subElement'], $params);
         }
 
+        if ($active) {
+
+            $this->
+                    RemoveActive();
+        }
+
         $element = array(
             'type' => 'element',
             'name' => $name,
             'url' => $url,
             'title' => $title,
-            'active' => false,
+            'active' => $active,
             'parameters' => $params,
             'subNav' => null
         );
