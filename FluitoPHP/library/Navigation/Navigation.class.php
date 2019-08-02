@@ -618,6 +618,11 @@ class Navigation extends \FluitoPHP\Base\Base {
         foreach ($this->
         elements as $key => $element) {
 
+            if ($element['type'] === 'separator') {
+
+                continue;
+            }
+
             if ($element['active']) {
 
                 return $key;
