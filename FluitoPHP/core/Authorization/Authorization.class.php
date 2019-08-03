@@ -369,7 +369,7 @@ class Authorization {
 
             if (!$user) {
 
-                throw new Exception('Please login to access the application.');
+                throw new \Exception('Please login to access the application.');
             }
         } else {
 
@@ -380,7 +380,7 @@ class Authorization {
                 !$user->
                         GetUserID()) {
 
-            throw new Exception('Please provide valid user_login.');
+            throw new \Exception('Please provide valid user_login.');
         }
 
         return new \FluitoPHP\Authorization\UserRoles($user);
